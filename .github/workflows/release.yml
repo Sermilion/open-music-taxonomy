@@ -1,0 +1,82 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run conformance validator
+        run: python validate.py
+
+      - name: Verify taxonomy version matches tag
+        run: |
+          tag="${GITHUB_REF_NAME#v}"
+          version="$(python -c "import json; print(json.load(open('taxonomy.json'))['version'])")"
+          echo "tag=$tag version=$version"
+          test "$version" = "$tag"
+
+      - name: Extract changelog section
+        run: |
+          tag="${GITHUB_REF_NAME#v}"
+          awk -v tag="$tag" '
+            $0 ~ "^## \\[" tag "\\]" { found = 1; next }
+            found && /^## / { exit }
+            found { print }
+          ' CHANGELOG.md > release-notes.md
+          if [ ! -s release-notes.md ]; then
+            echo "No CHANGELOG.md section found for [$tag]" >&2
+            exit 1
+          fi
+          {
+            echo "## What's New in ${GITHUB_REF_NAME}"
+            echo
+            cat release-notes.md
+          } > release-body.md
+
+      - name: Package release artifacts
+        run: |
+          mkdir -p dist
+          zip -r "dist/open-music-taxonomy-${GITHUB_REF_NAME}.zip" \
+            taxonomy.json \
+            taxonomy.schema.json \
+            classification.schema.json \
+            conformance.json \
+            reference-albums.json \
+            spec.md \
+            validate.py \
+            LICENSE.md \
+            licenses \
+            README.md \
+            CHANGELOG.md
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Open Music Taxonomy ${{ github.ref_name }}
+          body_path: release-body.md
+          draft: false
+          prerelease: ${{ contains(github.ref_name, '-') }}
+          fail_on_unmatched_files: true
+          files: |
+            taxonomy.json
+            taxonomy.schema.json
+            classification.schema.json
+            conformance.json
+            reference-albums.json
+            spec.md
+            validate.py
+            LICENSE.md
+            dist/open-music-taxonomy-${{ github.ref_name }}.zip

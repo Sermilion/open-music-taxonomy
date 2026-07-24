@@ -1,7 +1,7 @@
 {
   "schema": "open-music-taxonomy/taxonomy/0.1",
   "id": "open-music-taxonomy",
-  "version": "0.1.0-draft.1",
+  "version": "0.1.0",
   "language": "en",
   "genres": [
     {
@@ -232,8 +232,8 @@
     {
       "id": "crossover",
       "label": "Crossover",
-      "status": "provisional",
-      "sonic_definition": "Hardcore-derived rhythm, vocal delivery, and arrangement materially shape Thrash Metal; approval awaits a reviewed evidence package.",
+      "status": "approved",
+      "sonic_definition": "Hardcore-derived rhythm, vocal delivery, and arrangement materially shape the Thrash Metal sound.",
       "applicable_genres": ["metal"],
       "required_types": ["metal.thrash"]
     }

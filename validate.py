@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Dependency-free validator for the v0.1 Open Music Taxonomy draft fixtures."""
+"""Dependency-free validator for Open Music Taxonomy v0.1 fixtures."""
 
 from __future__ import annotations
 

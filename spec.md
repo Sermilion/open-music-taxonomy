@@ -1,8 +1,8 @@
 # Open Music Taxonomy Classification Specification
 
-Version: `0.1.0-draft`
+Version: `0.1.0`
 
-Status: Draft
+Status: Released
 
 ## 1. Purpose
 
@@ -106,6 +106,7 @@ Examples:
 - `melodic` and `technical` are broadly reusable Traits;
 - `blackened`, `viking`, `pirate`, and `neoclassical` are constrained to Metal;
 - `funeral` is constrained to Metal classifications containing the Doom Type;
+- `crossover` is constrained to Metal classifications containing the Thrash Type;
 - `post` is a global Trait with a canonical hyphen join rule.
 
 ### 4.4 Priority
@@ -306,13 +307,14 @@ An atom MUST NOT be approved from lyrical themes, geography, artist identity, or
 
 ## 17. Licensing
 
-The intended licensing model is:
+Licensing for this repository is:
 
-- taxonomy data: CC0;
+- taxonomy data: CC0 1.0;
 - specification prose: CC BY 4.0;
-- validators and reference implementations: Apache-2.0.
+- validators and reference implementations: Apache License 2.0.
 
-Contributions are accepted under the corresponding existing license.
+See [`LICENSE.md`](LICENSE.md) and the texts under [`licenses/`](licenses/). Contributions are
+accepted under the license that already applies to the files being changed.
 
 ## 18. Normative JSON example
 
@@ -351,5 +353,4 @@ The following are intentionally not standardized by v0.1:
 - cross-Genre relations;
 - pairwise Trait incompatibilities;
 - full multilingual morphology;
-- Deathrock;
-- Crossover Thrash until a reviewed sonic definition and evidence package are accepted.
+- Deathrock.

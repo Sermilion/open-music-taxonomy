@@ -1,6 +1,6 @@
 {
   "schema": "open-music-taxonomy/conformance/0.1",
-  "taxonomy": {"id": "open-music-taxonomy", "version": "0.1.0-draft.1"},
+  "taxonomy": {"id": "open-music-taxonomy", "version": "0.1.0"},
   "cases": [
     {
       "id": "C001", "name": "Metal", "expected": "valid", "display": "Metal",
@@ -151,8 +151,7 @@
       "classification": {"genre": "unknown", "traits": [], "types": []}
     },
     {
-      "id": "C038", "name": "Crossover Thrash Metal remains provisional", "expected": "invalid",
-      "expected_error": "trait crossover is not approved",
+      "id": "C038", "name": "Crossover Thrash Metal", "expected": "valid", "display": "Crossover Thrash Metal",
       "classification": {"genre": "metal", "traits": [{"id": "crossover", "priority": 1}], "types": [{"id": "metal.thrash", "priority": 1}]}
     },
     {
@@ -196,9 +195,9 @@
       "classification": {"genre": "metal", "traits": [{"id": "technical", "priority": 1}, {"id": "melodic", "priority": 3}], "types": [{"id": "metal.death", "priority": 1}]}
     },
     {
-      "id": "C047", "name": "Unknown Quantum Trait", "expected": "invalid",
-      "expected_error": "unknown trait quantum",
-      "classification": {"genre": "metal", "traits": [{"id": "quantum", "priority": 1}], "types": [{"id": "metal.death", "priority": 1}]}
+      "id": "C047", "name": "Crossover without Thrash Type", "expected": "invalid",
+      "expected_error": "trait crossover requires types metal.thrash",
+      "classification": {"genre": "metal", "traits": [{"id": "crossover", "priority": 1}], "types": []}
     },
     {
       "id": "C048", "name": "Metal Death Type used with Rock", "expected": "invalid",

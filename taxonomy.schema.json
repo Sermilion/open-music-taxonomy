@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.org/open-music-taxonomy/v0.1/taxonomy.schema.json",
+  "$id": "open-music-taxonomy/taxonomy.schema/0.1",
   "title": "Open Music Taxonomy Package",
   "type": "object",
   "required": [
