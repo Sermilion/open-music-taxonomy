@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/open-music-taxonomy/v0.1/classification.schema.json",
+  "title": "Open Music Taxonomy Classification",
+  "description": "A single canonical Album classification or complete Track override.",
+  "type": "object",
+  "required": [
+    "schema",
+    "taxonomy",
+    "scope",
+    "genre",
+    "traits",
+    "types"
+  ],
+  "properties": {
+    "schema": {
+      "const": "open-music-taxonomy/classification/0.1"
+    },
+    "taxonomy": {
+      "type": "object",
+      "required": ["id", "version"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "scope": {
+      "enum": ["album", "track_override"]
+    },
+    "genre": {
+      "type": "string"
+    },
+    "traits": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/prioritizedReference"
+      }
+    },
+    "types": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/prioritizedReference"
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "genre": {
+          "const": "unknown"
+        },
+        "traits": {
+          "maxItems": 0
+        },
+        "types": {
+          "maxItems": 0
+        }
+      }
+    },
+    {
+      "properties": {
+        "genre": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*(?:[.-][a-z0-9]+)*$",
+          "not": {
+            "const": "unknown"
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "prioritizedReference": {
+      "type": "object",
+      "required": ["id", "priority"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*(?:[.-][a-z0-9]+)*$"
+        },
+        "priority": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

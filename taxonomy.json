@@ -1,0 +1,241 @@
+{
+  "schema": "open-music-taxonomy/taxonomy/0.1",
+  "id": "open-music-taxonomy",
+  "version": "0.1.0-draft.1",
+  "language": "en",
+  "genres": [
+    {
+      "id": "metal",
+      "label": "Metal",
+      "status": "approved",
+      "sonic_definition": "Riff-centered amplified music characterized by strongly distorted timbres, pronounced rhythmic weight, and performance vocabularies developed within Metal."
+    },
+    {
+      "id": "rock",
+      "label": "Rock",
+      "status": "approved",
+      "sonic_definition": "Amplified band music centered on rhythmic groove, a pronounced backbeat, and recurring guitar, bass, drum, and vocal song structures developed within Rock."
+    },
+    {
+      "id": "metalcore",
+      "label": "Metalcore",
+      "status": "approved",
+      "sonic_definition": "Heavy music combining Metal riff vocabulary with Hardcore-derived rhythmic structures, transitions, and breakdown-centered arrangements."
+    },
+    {
+      "id": "deathcore",
+      "label": "Deathcore",
+      "status": "approved",
+      "sonic_definition": "Heavy music combining Death Metal riffing and extreme-vocal vocabulary with breakdown-centered Core arrangements."
+    }
+  ],
+  "types": [
+    {
+      "id": "metal.heavy",
+      "label": "Heavy",
+      "genre": "metal",
+      "status": "approved",
+      "sonic_definition": "Traditional Metal built around forceful guitar riffs, clear song forms, and predominantly melodic lead work and vocals."
+    },
+    {
+      "id": "metal.death",
+      "label": "Death",
+      "genre": "metal",
+      "status": "approved",
+      "sonic_definition": "Metal using heavily distorted low-register riffing, extreme vocals, forceful percussion, and Death Metal rhythmic and harmonic vocabularies."
+    },
+    {
+      "id": "metal.doom",
+      "label": "Doom",
+      "genre": "metal",
+      "status": "approved",
+      "sonic_definition": "Metal emphasizing slow or weighty pacing, sustained heavy riffs, and an oppressive or mournful harmonic character."
+    },
+    {
+      "id": "metal.black",
+      "label": "Black",
+      "genre": "metal",
+      "status": "approved",
+      "sonic_definition": "Metal using Black Metal riffing, tremolo-centered textures, characteristic extreme vocals, and its established rhythmic and harmonic vocabulary."
+    },
+    {
+      "id": "metal.thrash",
+      "label": "Thrash",
+      "genre": "metal",
+      "status": "approved",
+      "sonic_definition": "Metal emphasizing rapid palm-muted riffing, aggressive rhythmic attack, and tightly articulated high-energy arrangements."
+    },
+    {
+      "id": "metal.power",
+      "label": "Power",
+      "genre": "metal",
+      "status": "approved",
+      "sonic_definition": "Metal emphasizing melodic lead work, driving rhythms, harmonized guitars, and expansive predominantly clean-vocal arrangements."
+    },
+    {
+      "id": "metal.speed",
+      "label": "Speed",
+      "genre": "metal",
+      "status": "approved",
+      "sonic_definition": "Metal organized around sustained fast tempos and rapid riff articulation derived from early fast Heavy Metal."
+    },
+    {
+      "id": "metal.gothic",
+      "label": "Gothic",
+      "genre": "metal",
+      "status": "approved",
+      "sonic_definition": "Metal using dark harmonic color, dramatic contrast, and established Gothic Metal vocal and arrangement vocabularies."
+    },
+    {
+      "id": "metal.sludge",
+      "label": "Sludge",
+      "genre": "metal",
+      "status": "approved",
+      "sonic_definition": "Metal using abrasive low-register riffing, thick distorted timbres, and rhythmically forceful Sludge vocabulary."
+    },
+    {
+      "id": "metal.industrial",
+      "label": "Industrial",
+      "genre": "metal",
+      "status": "approved",
+      "sonic_definition": "Metal structured around mechanical repetition, machine-like rhythm, and electronically processed or industrialized timbres."
+    },
+    {
+      "id": "metal.groove",
+      "label": "Groove",
+      "genre": "metal",
+      "status": "approved",
+      "sonic_definition": "Metal emphasizing syncopated mid-tempo riff cycles, strong downbeat weight, and groove-centered rhythmic repetition."
+    },
+    {
+      "id": "rock.hard",
+      "label": "Hard",
+      "genre": "rock",
+      "status": "approved",
+      "sonic_definition": "Rock emphasizing heavy guitar distortion, forceful drumming, and riff-driven arrangements while retaining Rock song vocabulary."
+    },
+    {
+      "id": "rock.alternative",
+      "label": "Alternative",
+      "genre": "rock",
+      "status": "approved",
+      "sonic_definition": "Rock using the contrasting timbres, dynamics, and songwriting vocabularies established by Alternative Rock."
+    },
+    {
+      "id": "rock.gothic",
+      "label": "Gothic",
+      "genre": "rock",
+      "status": "approved",
+      "sonic_definition": "Rock using dark post-punk-derived bass, guitar, vocal, and atmospheric vocabularies established by Gothic Rock."
+    }
+  ],
+  "traits": [
+    {
+      "id": "technical",
+      "label": "Technical",
+      "status": "approved",
+      "sonic_definition": "Prominent compositional and performance complexity requiring unusually precise or advanced execution."
+    },
+    {
+      "id": "melodic",
+      "label": "Melodic",
+      "status": "approved",
+      "sonic_definition": "Melodic development is a defining structural focus rather than an incidental element."
+    },
+    {
+      "id": "blackened",
+      "label": "Blackened",
+      "status": "approved",
+      "sonic_definition": "Audible use of Black Metal riffing, texture, vocal, or harmonic characteristics without classification as the Black Type.",
+      "applicable_genres": ["metal"]
+    },
+    {
+      "id": "atmospheric",
+      "label": "Atmospheric",
+      "status": "approved",
+      "sonic_definition": "Sustained texture, space, layering, and ambience are defining compositional elements."
+    },
+    {
+      "id": "raw",
+      "label": "Raw",
+      "status": "approved",
+      "sonic_definition": "Deliberately unpolished timbre and production are defining parts of the audible result."
+    },
+    {
+      "id": "symphonic",
+      "label": "Symphonic",
+      "status": "approved",
+      "sonic_definition": "Orchestral arrangement, instrumentation, or orchestration techniques are defining structural elements."
+    },
+    {
+      "id": "brutal",
+      "label": "Brutal",
+      "status": "approved",
+      "sonic_definition": "Extreme density, percussive force, low-register riffing, and aggressive articulation are defining characteristics."
+    },
+    {
+      "id": "progressive",
+      "label": "Progressive",
+      "status": "approved",
+      "sonic_definition": "Extended development, structural variation, metric complexity, or nonstandard form is a defining compositional focus."
+    },
+    {
+      "id": "stoner",
+      "label": "Stoner",
+      "status": "approved",
+      "sonic_definition": "Fuzz-heavy timbre, repetitive groove, and psychedelic-derived riff development shape the Doom Metal sound.",
+      "applicable_genres": ["metal"],
+      "required_types": ["metal.doom"]
+    },
+    {
+      "id": "funeral",
+      "label": "Funeral",
+      "status": "approved",
+      "sonic_definition": "Extremely slow dirge-like pacing, sustained weight, and expansive mournful atmosphere shape the Doom Metal sound.",
+      "applicable_genres": ["metal"],
+      "required_types": ["metal.doom"]
+    },
+    {
+      "id": "post",
+      "label": "Post",
+      "status": "approved",
+      "sonic_definition": "The music audibly moves beyond the base Genre's conventional song forms through texture, development, and structural abstraction.",
+      "join_next": "hyphen"
+    },
+    {
+      "id": "folk",
+      "label": "Folk",
+      "status": "approved",
+      "sonic_definition": "Traditional or vernacular melodic, rhythmic, instrumental, or arrangement vocabularies materially shape the sound."
+    },
+    {
+      "id": "viking",
+      "label": "Viking",
+      "status": "approved",
+      "sonic_definition": "A maintainer-curated Metal sound defined by its characteristic melodic, rhythmic, vocal, and arrangement vocabulary; themes or artist origin alone do not qualify.",
+      "applicable_genres": ["metal"]
+    },
+    {
+      "id": "pirate",
+      "label": "Pirate",
+      "status": "approved",
+      "sonic_definition": "A maintainer-curated Metal sound defined by characteristic folk-derived melody, rhythm, vocal phrasing, and arrangement; themes or imagery alone do not qualify.",
+      "applicable_genres": ["metal"]
+    },
+    {
+      "id": "neoclassical",
+      "label": "Neoclassical",
+      "status": "approved",
+      "sonic_definition": "Classical harmonic language, melodic construction, formal devices, and instrumental techniques materially shape the Metal sound.",
+      "applicable_genres": ["metal"]
+    },
+    {
+      "id": "crossover",
+      "label": "Crossover",
+      "status": "provisional",
+      "sonic_definition": "Hardcore-derived rhythm, vocal delivery, and arrangement materially shape Thrash Metal; approval awaits a reviewed evidence package.",
+      "applicable_genres": ["metal"],
+      "required_types": ["metal.thrash"]
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "schema": "open-music-taxonomy/conformance/0.1",
+  "taxonomy": {"id": "open-music-taxonomy", "version": "0.1.0-draft.1"},
+  "cases": [
+    {
+      "id": "C001", "name": "Metal", "expected": "valid", "display": "Metal",
+      "classification": {"genre": "metal", "traits": [], "types": []}
+    },
+    {
+      "id": "C002", "name": "Rock", "expected": "valid", "display": "Rock",
+      "classification": {"genre": "rock", "traits": [], "types": []}
+    },
+    {
+      "id": "C003", "name": "Heavy Metal", "expected": "valid", "display": "Heavy Metal",
+      "classification": {"genre": "metal", "traits": [], "types": [{"id": "metal.heavy", "priority": 1}]}
+    },
+    {
+      "id": "C004", "name": "Death Metal", "expected": "valid", "display": "Death Metal",
+      "classification": {"genre": "metal", "traits": [], "types": [{"id": "metal.death", "priority": 1}]}
+    },
+    {
+      "id": "C005", "name": "Doom Metal", "expected": "valid", "display": "Doom Metal",
+      "classification": {"genre": "metal", "traits": [], "types": [{"id": "metal.doom", "priority": 1}]}
+    },
+    {
+      "id": "C006", "name": "Black Metal", "expected": "valid", "display": "Black Metal",
+      "classification": {"genre": "metal", "traits": [], "types": [{"id": "metal.black", "priority": 1}]}
+    },
+    {
+      "id": "C007", "name": "Thrash Metal", "expected": "valid", "display": "Thrash Metal",
+      "classification": {"genre": "metal", "traits": [], "types": [{"id": "metal.thrash", "priority": 1}]}
+    },
+    {
+      "id": "C008", "name": "Hard Rock", "expected": "valid", "display": "Hard Rock",
+      "classification": {"genre": "rock", "traits": [], "types": [{"id": "rock.hard", "priority": 1}]}
+    },
+    {
+      "id": "C009", "name": "Alternative Rock", "expected": "valid", "display": "Alternative Rock",
+      "classification": {"genre": "rock", "traits": [], "types": [{"id": "rock.alternative", "priority": 1}]}
+    },
+    {
+      "id": "C010", "name": "Gothic Rock", "expected": "valid", "display": "Gothic Rock",
+      "classification": {"genre": "rock", "traits": [], "types": [{"id": "rock.gothic", "priority": 1}]}
+    },
+    {
+      "id": "C011", "name": "Technical Death Metal", "expected": "valid", "display": "Technical Death Metal",
+      "classification": {"genre": "metal", "traits": [{"id": "technical", "priority": 1}], "types": [{"id": "metal.death", "priority": 1}]}
+    },
+    {
+      "id": "C012", "name": "Melodic Death Metal", "expected": "valid", "display": "Melodic Death Metal",
+      "classification": {"genre": "metal", "traits": [{"id": "melodic", "priority": 1}], "types": [{"id": "metal.death", "priority": 1}]}
+    },
+    {
+      "id": "C013", "name": "Technical Melodic Death Metal", "expected": "valid", "display": "Technical Melodic Death Metal",
+      "classification": {"genre": "metal", "traits": [{"id": "technical", "priority": 1}, {"id": "melodic", "priority": 2}], "types": [{"id": "metal.death", "priority": 1}]}
+    },
+    {
+      "id": "C014", "name": "Melodic Technical Death Metal", "expected": "valid", "display": "Melodic Technical Death Metal",
+      "classification": {"genre": "metal", "traits": [{"id": "melodic", "priority": 1}, {"id": "technical", "priority": 2}], "types": [{"id": "metal.death", "priority": 1}]}
+    },
+    {
+      "id": "C015", "name": "Blackened Death Metal", "expected": "valid", "display": "Blackened Death Metal",
+      "classification": {"genre": "metal", "traits": [{"id": "blackened", "priority": 1}], "types": [{"id": "metal.death", "priority": 1}]}
+    },
+    {
+      "id": "C016", "name": "Death-Doom Metal", "expected": "valid", "display": "Death-Doom Metal",
+      "classification": {"genre": "metal", "traits": [], "types": [{"id": "metal.death", "priority": 1}, {"id": "metal.doom", "priority": 2}]}
+    },
+    {
+      "id": "C017", "name": "Doom-Death Metal", "expected": "valid", "display": "Doom-Death Metal",
+      "classification": {"genre": "metal", "traits": [], "types": [{"id": "metal.doom", "priority": 1}, {"id": "metal.death", "priority": 2}]}
+    },
+    {
+      "id": "C018", "name": "Atmospheric Black Metal", "expected": "valid", "display": "Atmospheric Black Metal",
+      "classification": {"genre": "metal", "traits": [{"id": "atmospheric", "priority": 1}], "types": [{"id": "metal.black", "priority": 1}]}
+    },
+    {
+      "id": "C019", "name": "Raw Black Metal", "expected": "valid", "display": "Raw Black Metal",
+      "classification": {"genre": "metal", "traits": [{"id": "raw", "priority": 1}], "types": [{"id": "metal.black", "priority": 1}]}
+    },
+    {
+      "id": "C020", "name": "Symphonic Gothic Metal", "expected": "valid", "display": "Symphonic Gothic Metal",
+      "classification": {"genre": "metal", "traits": [{"id": "symphonic", "priority": 1}], "types": [{"id": "metal.gothic", "priority": 1}]}
+    },
+    {
+      "id": "C021", "name": "Gothic-Doom Metal", "expected": "valid", "display": "Gothic-Doom Metal",
+      "classification": {"genre": "metal", "traits": [], "types": [{"id": "metal.gothic", "priority": 1}, {"id": "metal.doom", "priority": 2}]}
+    },
+    {
+      "id": "C022", "name": "Technical Brutal Death Metal", "expected": "valid", "display": "Technical Brutal Death Metal",
+      "classification": {"genre": "metal", "traits": [{"id": "technical", "priority": 1}, {"id": "brutal", "priority": 2}], "types": [{"id": "metal.death", "priority": 1}]}
+    },
+    {
+      "id": "C023", "name": "Progressive Technical Death Metal", "expected": "valid", "display": "Progressive Technical Death Metal",
+      "classification": {"genre": "metal", "traits": [{"id": "progressive", "priority": 1}, {"id": "technical", "priority": 2}], "types": [{"id": "metal.death", "priority": 1}]}
+    },
+    {
+      "id": "C024", "name": "Technical Progressive Death Metal", "expected": "valid", "display": "Technical Progressive Death Metal",
+      "classification": {"genre": "metal", "traits": [{"id": "technical", "priority": 1}, {"id": "progressive", "priority": 2}], "types": [{"id": "metal.death", "priority": 1}]}
+    },
+    {
+      "id": "C025", "name": "Stoner Doom Metal", "expected": "valid", "display": "Stoner Doom Metal",
+      "classification": {"genre": "metal", "traits": [{"id": "stoner", "priority": 1}], "types": [{"id": "metal.doom", "priority": 1}]}
+    },
+    {
+      "id": "C026", "name": "Sludge-Doom Metal", "expected": "valid", "display": "Sludge-Doom Metal",
+      "classification": {"genre": "metal", "traits": [], "types": [{"id": "metal.sludge", "priority": 1}, {"id": "metal.doom", "priority": 2}]}
+    },
+    {
+      "id": "C027", "name": "Industrial Metal", "expected": "valid", "display": "Industrial Metal",
+      "classification": {"genre": "metal", "traits": [], "types": [{"id": "metal.industrial", "priority": 1}]}
+    },
+    {
+      "id": "C028", "name": "Groove Metal", "expected": "valid", "display": "Groove Metal",
+      "classification": {"genre": "metal", "traits": [], "types": [{"id": "metal.groove", "priority": 1}]}
+    },
+    {
+      "id": "C029", "name": "Melodic Metalcore", "expected": "valid", "display": "Melodic Metalcore",
+      "classification": {"genre": "metalcore", "traits": [{"id": "melodic", "priority": 1}], "types": []}
+    },
+    {
+      "id": "C030", "name": "Technical Deathcore", "expected": "valid", "display": "Technical Deathcore",
+      "classification": {"genre": "deathcore", "traits": [{"id": "technical", "priority": 1}], "types": []}
+    },
+    {
+      "id": "C031", "name": "Post-Rock", "expected": "valid", "display": "Post-Rock",
+      "classification": {"genre": "rock", "traits": [{"id": "post", "priority": 1}], "types": []}
+    },
+    {
+      "id": "C032", "name": "Funeral Doom Metal", "expected": "valid", "display": "Funeral Doom Metal",
+      "classification": {"genre": "metal", "traits": [{"id": "funeral", "priority": 1}], "types": [{"id": "metal.doom", "priority": 1}]}
+    },
+    {
+      "id": "C033", "name": "Folk Metal", "expected": "valid", "display": "Folk Metal",
+      "classification": {"genre": "metal", "traits": [{"id": "folk", "priority": 1}], "types": []}
+    },
+    {
+      "id": "C034", "name": "Viking Metal", "expected": "valid", "display": "Viking Metal",
+      "classification": {"genre": "metal", "traits": [{"id": "viking", "priority": 1}], "types": []}
+    },
+    {
+      "id": "C035", "name": "Pirate Metal", "expected": "valid", "display": "Pirate Metal",
+      "classification": {"genre": "metal", "traits": [{"id": "pirate", "priority": 1}], "types": []}
+    },
+    {
+      "id": "C036", "name": "Neoclassical Metal", "expected": "valid", "display": "Neoclassical Metal",
+      "classification": {"genre": "metal", "traits": [{"id": "neoclassical", "priority": 1}], "types": []}
+    },
+    {
+      "id": "C037", "name": "Unknown", "expected": "valid", "display": "Unknown",
+      "classification": {"genre": "unknown", "traits": [], "types": []}
+    },
+    {
+      "id": "C038", "name": "Crossover Thrash Metal remains provisional", "expected": "invalid",
+      "expected_error": "trait crossover is not approved",
+      "classification": {"genre": "metal", "traits": [{"id": "crossover", "priority": 1}], "types": [{"id": "metal.thrash", "priority": 1}]}
+    },
+    {
+      "id": "C039", "name": "Swedish Death Metal leaks location", "expected": "invalid",
+      "expected_error": "unknown trait swedish",
+      "classification": {"genre": "metal", "traits": [{"id": "swedish", "priority": 1}], "types": [{"id": "metal.death", "priority": 1}]}
+    },
+    {
+      "id": "C040", "name": "Latin Metal leaks culture or location", "expected": "invalid",
+      "expected_error": "unknown trait latin",
+      "classification": {"genre": "metal", "traits": [{"id": "latin", "priority": 1}], "types": []}
+    },
+    {
+      "id": "C041", "name": "Female-fronted Metal leaks performer identity", "expected": "invalid",
+      "expected_error": "unknown trait female-fronted",
+      "classification": {"genre": "metal", "traits": [{"id": "female-fronted", "priority": 1}], "types": []}
+    },
+    {
+      "id": "C042", "name": "Christian Metal leaks belief or lyrical theme", "expected": "invalid",
+      "expected_error": "unknown trait christian",
+      "classification": {"genre": "metal", "traits": [{"id": "christian", "priority": 1}], "types": []}
+    },
+    {
+      "id": "C043", "name": "Death Melodic Technical Metal violates canonical order", "expected": "invalid",
+      "expected_error": "canonical display mismatch", "display": "Death Melodic Technical Metal",
+      "classification": {"genre": "metal", "traits": [{"id": "melodic", "priority": 1}, {"id": "technical", "priority": 2}], "types": [{"id": "metal.death", "priority": 1}]}
+    },
+    {
+      "id": "C044", "name": "Duplicate Death Type", "expected": "invalid",
+      "expected_error": "duplicate type metal.death",
+      "classification": {"genre": "metal", "traits": [], "types": [{"id": "metal.death", "priority": 1}, {"id": "metal.death", "priority": 2}]}
+    },
+    {
+      "id": "C045", "name": "Duplicate Trait priorities", "expected": "invalid",
+      "expected_error": "trait priorities must be unique",
+      "classification": {"genre": "metal", "traits": [{"id": "technical", "priority": 1}, {"id": "melodic", "priority": 1}], "types": [{"id": "metal.death", "priority": 1}]}
+    },
+    {
+      "id": "C046", "name": "Trait priority gap", "expected": "invalid",
+      "expected_error": "trait priorities must be contiguous",
+      "classification": {"genre": "metal", "traits": [{"id": "technical", "priority": 1}, {"id": "melodic", "priority": 3}], "types": [{"id": "metal.death", "priority": 1}]}
+    },
+    {
+      "id": "C047", "name": "Unknown Quantum Trait", "expected": "invalid",
+      "expected_error": "unknown trait quantum",
+      "classification": {"genre": "metal", "traits": [{"id": "quantum", "priority": 1}], "types": [{"id": "metal.death", "priority": 1}]}
+    },
+    {
+      "id": "C048", "name": "Metal Death Type used with Rock", "expected": "invalid",
+      "expected_error": "type metal.death belongs to metal, not rock",
+      "classification": {"genre": "rock", "traits": [], "types": [{"id": "metal.death", "priority": 1}]}
+    },
+    {
+      "id": "C049", "name": "Blackened Rock violates Trait applicability", "expected": "invalid",
+      "expected_error": "trait blackened is not applicable to rock",
+      "classification": {"genre": "rock", "traits": [{"id": "blackened", "priority": 1}], "types": []}
+    },
+    {
+      "id": "C050", "name": "Technical Unknown carries a modifier", "expected": "invalid",
+      "expected_error": "unknown cannot have modifiers",
+      "classification": {"genre": "unknown", "traits": [{"id": "technical", "priority": 1}], "types": []}
+    }
+  ],
+  "equivalence_assertions": [
+    {"left": "C013", "right": "C014", "exact_equal": false, "compositionally_equivalent": true},
+    {"left": "C016", "right": "C017", "exact_equal": false, "compositionally_equivalent": true},
+    {"left": "C023", "right": "C024", "exact_equal": false, "compositionally_equivalent": true}
+  ]
+}

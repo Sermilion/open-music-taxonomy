@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/open-music-taxonomy/v0.1/taxonomy.schema.json",
+  "title": "Open Music Taxonomy Package",
+  "type": "object",
+  "required": [
+    "schema",
+    "id",
+    "version",
+    "language",
+    "genres",
+    "types",
+    "traits"
+  ],
+  "properties": {
+    "schema": {
+      "const": "open-music-taxonomy/taxonomy/0.1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?$"
+    },
+    "language": {
+      "const": "en"
+    },
+    "genres": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/genre"
+      }
+    },
+    "types": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/type"
+      }
+    },
+    "traits": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/trait"
+      }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(?:[.-][a-z0-9]+)*$"
+    },
+    "status": {
+      "enum": ["approved", "deprecated", "provisional"]
+    },
+    "commonAtom": {
+      "type": "object",
+      "required": ["id", "label", "status", "sonic_definition"],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "sonic_definition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "replacement": {
+          "$ref": "#/$defs/id"
+        }
+      }
+    },
+    "genre": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/commonAtom"
+        },
+        {
+          "type": "object"
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "type": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/commonAtom"
+        },
+        {
+          "type": "object",
+          "required": ["genre"],
+          "properties": {
+            "genre": {
+              "$ref": "#/$defs/id"
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "trait": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/commonAtom"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "applicable_genres": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/id"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "required_types": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/id"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "join_next": {
+              "enum": ["space", "hyphen", "concatenate"]
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,188 @@
+{
+  "schema": "open-music-taxonomy/reference-albums/0.1",
+  "taxonomy": {
+    "id": "open-music-taxonomy",
+    "version": "0.1.0-draft.1"
+  },
+  "purpose": "Pilot corpus derived from locally owned releases. Album identities and sonic observations are public; audio files remain local and excluded from version control.",
+  "albums": [
+    {
+      "id": "obscura-cosmogenesis",
+      "artist": "Obscura",
+      "album": "Cosmogenesis",
+      "review_status": "accepted",
+      "display": "Technical Progressive Death Metal",
+      "classification": {
+        "schema": "open-music-taxonomy/classification/0.1",
+        "taxonomy": {
+          "id": "open-music-taxonomy",
+          "version": "0.1.0-draft.1"
+        },
+        "scope": "album",
+        "genre": "metal",
+        "traits": [
+          {"id": "technical", "priority": 1},
+          {"id": "progressive", "priority": 2}
+        ],
+        "types": [
+          {"id": "metal.death", "priority": 1}
+        ]
+      },
+      "sonic_rationale": "Highly precise instrumental execution, dense changing structures, and extended compositional development are defining features over a Death Metal foundation.",
+      "disputed_alternatives": [
+        {
+          "display": "Technical Death Metal",
+          "reason": "Plausible if progressive structure is treated as incidental, but the album's long-form development makes that omission too reductive."
+        }
+      ]
+    },
+    {
+      "id": "in-flames-the-jester-race",
+      "artist": "In Flames",
+      "album": "The Jester Race",
+      "review_status": "accepted",
+      "display": "Melodic Death Metal",
+      "classification": {
+        "schema": "open-music-taxonomy/classification/0.1",
+        "taxonomy": {
+          "id": "open-music-taxonomy",
+          "version": "0.1.0-draft.1"
+        },
+        "scope": "album",
+        "genre": "metal",
+        "traits": [
+          {"id": "melodic", "priority": 1}
+        ],
+        "types": [
+          {"id": "metal.death", "priority": 1}
+        ]
+      },
+      "sonic_rationale": "Harmonized guitar leads and recurring melodic development organize the songs while the riffing, vocals, and rhythmic language remain rooted in Death Metal.",
+      "disputed_alternatives": [
+        {
+          "display": "Death Metal",
+          "reason": "Valid at lower specificity, but it loses an album-defining melodic facet."
+        }
+      ]
+    },
+    {
+      "id": "ahab-the-call-of-the-wretched-sea",
+      "artist": "Ahab",
+      "album": "The Call of the Wretched Sea",
+      "review_status": "accepted",
+      "display": "Funeral Doom Metal",
+      "classification": {
+        "schema": "open-music-taxonomy/classification/0.1",
+        "taxonomy": {
+          "id": "open-music-taxonomy",
+          "version": "0.1.0-draft.1"
+        },
+        "scope": "album",
+        "genre": "metal",
+        "traits": [
+          {"id": "funeral", "priority": 1}
+        ],
+        "types": [
+          {"id": "metal.doom", "priority": 1}
+        ]
+      },
+      "sonic_rationale": "Extremely slow dirge pacing, sustained low-register weight, and expansive mournful passages satisfy the Funeral trait's Doom-specific constraints.",
+      "disputed_alternatives": [
+        {
+          "display": "Atmospheric Doom Metal",
+          "reason": "Atmosphere is prominent, but Funeral is the more specific defining sonic vocabulary."
+        }
+      ]
+    },
+    {
+      "id": "emperor-anthems-to-the-welkin-at-dusk",
+      "artist": "Emperor",
+      "album": "Anthems to the Welkin at Dusk",
+      "review_status": "accepted",
+      "display": "Symphonic Black Metal",
+      "classification": {
+        "schema": "open-music-taxonomy/classification/0.1",
+        "taxonomy": {
+          "id": "open-music-taxonomy",
+          "version": "0.1.0-draft.1"
+        },
+        "scope": "album",
+        "genre": "metal",
+        "traits": [
+          {"id": "symphonic", "priority": 1}
+        ],
+        "types": [
+          {"id": "metal.black", "priority": 1}
+        ]
+      },
+      "sonic_rationale": "Black Metal tremolo, vocal, and rhythmic vocabulary is structurally combined with orchestral keyboard layers and symphonic arrangement.",
+      "disputed_alternatives": [
+        {
+          "display": "Progressive Symphonic Black Metal",
+          "reason": "Structural complexity supports Progressive, but reviewers must decide whether it is defining enough to precede Symphonic."
+        }
+      ]
+    },
+    {
+      "id": "gojira-from-mars-to-sirius",
+      "artist": "Gojira",
+      "album": "From Mars to Sirius",
+      "review_status": "needs_review",
+      "display": "Progressive Death-Groove Metal",
+      "classification": {
+        "schema": "open-music-taxonomy/classification/0.1",
+        "taxonomy": {
+          "id": "open-music-taxonomy",
+          "version": "0.1.0-draft.1"
+        },
+        "scope": "album",
+        "genre": "metal",
+        "traits": [
+          {"id": "progressive", "priority": 1}
+        ],
+        "types": [
+          {"id": "metal.death", "priority": 1},
+          {"id": "metal.groove", "priority": 2}
+        ]
+      },
+      "sonic_rationale": "Long-form development and structural variation shape an album whose extreme-vocal and riff language combines Death Metal attack with repeated syncopated Groove Metal cycles.",
+      "disputed_alternatives": [
+        {
+          "display": "Progressive Groove-Death Metal",
+          "reason": "Contains the same atoms but reverses Type emphasis; this is compositionally equivalent, not exactly equal."
+        },
+        {
+          "display": "Progressive Death Metal",
+          "reason": "Avoids an awkward compound rendering but discards the groove-centered rhythmic vocabulary."
+        }
+      ]
+    },
+    {
+      "id": "pink-floyd-the-dark-side-of-the-moon",
+      "artist": "Pink Floyd",
+      "album": "The Dark Side of the Moon",
+      "review_status": "accepted",
+      "display": "Progressive Rock",
+      "classification": {
+        "schema": "open-music-taxonomy/classification/0.1",
+        "taxonomy": {
+          "id": "open-music-taxonomy",
+          "version": "0.1.0-draft.1"
+        },
+        "scope": "album",
+        "genre": "rock",
+        "traits": [
+          {"id": "progressive", "priority": 1}
+        ],
+        "types": []
+      },
+      "sonic_rationale": "Continuous album-scale development, studio experimentation, extended forms, and nonstandard transitions make Progressive a defining Rock trait.",
+      "disputed_alternatives": [
+        {
+          "display": "Rock",
+          "reason": "Technically valid but omits the release's defining compositional structure."
+        }
+      ]
+    }
+  ]
+}
