@@ -1,6 +1,6 @@
 {
   "schema": "open-music-taxonomy/conformance/0.1",
-  "taxonomy": {"id": "open-music-taxonomy", "version": "0.2.0"},
+  "taxonomy": {"id": "open-music-taxonomy", "version": "0.4.0"},
   "cases": [
     {
       "id": "C001", "name": "Metal", "expected": "valid", "display": "Metal",
@@ -254,6 +254,50 @@
       "id": "C060", "name": "Deprecated Post Trait rejected", "expected": "invalid",
       "expected_error": "trait post is not approved",
       "classification": {"genre": "metal", "traits": [{"id": "post", "priority": 1}], "types": []}
+    },
+    {
+      "id": "C061", "name": "Vocal Jazz", "expected": "valid", "display": "Vocal Jazz",
+      "classification": {"genre": "jazz", "traits": [], "types": [{"id": "jazz.vocal", "priority": 1}]}
+    },
+    {
+      "id": "C062", "name": "Swing Jazz", "expected": "valid", "display": "Swing Jazz",
+      "classification": {"genre": "jazz", "traits": [], "types": [{"id": "jazz.swing", "priority": 1}]}
+    },
+    {
+      "id": "C063", "name": "Big Band Jazz", "expected": "valid", "display": "Big Band Jazz",
+      "classification": {"genre": "jazz", "traits": [], "types": [{"id": "jazz.bigband", "priority": 1}]}
+    },
+    {
+      "id": "C064", "name": "Soul Jazz", "expected": "valid", "display": "Soul Jazz",
+      "classification": {"genre": "jazz", "traits": [], "types": [{"id": "jazz.soul", "priority": 1}]}
+    },
+    {
+      "id": "C065", "name": "Traditional Pop", "expected": "valid", "display": "Traditional Pop",
+      "classification": {"genre": "traditionalpop", "traits": [], "types": []}
+    },
+    {
+      "id": "C066", "name": "House Electronic", "expected": "valid", "display": "House Electronic",
+      "classification": {"genre": "electronic", "traits": [], "types": [{"id": "electronic.house", "priority": 1}]}
+    },
+    {
+      "id": "C067", "name": "Techno Electronic", "expected": "valid", "display": "Techno Electronic",
+      "classification": {"genre": "electronic", "traits": [], "types": [{"id": "electronic.techno", "priority": 1}]}
+    },
+    {
+      "id": "C068", "name": "IDM Electronic", "expected": "valid", "display": "IDM Electronic",
+      "classification": {"genre": "electronic", "traits": [], "types": [{"id": "electronic.idm", "priority": 1}]}
+    },
+    {
+      "id": "C069", "name": "Darkwave Electronic", "expected": "valid", "display": "Darkwave Electronic",
+      "classification": {"genre": "electronic", "traits": [], "types": [{"id": "electronic.darkwave", "priority": 1}]}
+    },
+    {
+      "id": "C070", "name": "Synthpop Electronic", "expected": "valid", "display": "Synthpop Electronic",
+      "classification": {"genre": "electronic", "traits": [], "types": [{"id": "electronic.synthpop", "priority": 1}]}
+    },
+    {
+      "id": "C071", "name": "Rock Electronic", "expected": "valid", "display": "Rock Electronic",
+      "classification": {"genre": "electronic", "traits": [], "types": [{"id": "electronic.rock", "priority": 1}]}
     }
   ],
   "equivalence_assertions": [

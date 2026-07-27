@@ -1,7 +1,7 @@
 {
   "schema": "open-music-taxonomy/taxonomy/0.1",
   "id": "open-music-taxonomy",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "language": "en",
   "genres": [
     {
@@ -57,6 +57,24 @@
       "label": "Emoviolence",
       "status": "approved",
       "sonic_definition": "Extreme music fusing Screamo-derived emotion and dissonance with Grindcore blast velocity and brevity, developed within Emoviolence."
+    },
+    {
+      "id": "jazz",
+      "label": "Jazz",
+      "status": "approved",
+      "sonic_definition": "Improvised music built on swing rhythm, blues-based harmony, and interactive ensemble improvisation, using the instrumental and vocal vocabularies developed within the Jazz tradition."
+    },
+    {
+      "id": "traditionalpop",
+      "label": "Traditional Pop",
+      "status": "approved",
+      "sonic_definition": "Mid-20th-century popular vocal music built on standard song form (the American Songbook), sung delivery, and orchestral or small-combo accompaniment, developed before and alongside Rock."
+    },
+    {
+      "id": "electronic",
+      "label": "Electronic",
+      "status": "approved",
+      "sonic_definition": "Music built primarily on electronically generated or sampled timbres, sequenced or programmed rhythm, and studio-as-instrument production, developed within Electronic music."
     }
   ],
   "types": [
@@ -181,6 +199,76 @@
       "status": "approved",
       "sonic_definition": "Hardcore that audibly moves beyond conventional Hardcore song forms through texture, development, and structural abstraction.",
       "join_next": "hyphen"
+    },
+    {
+      "id": "jazz.vocal",
+      "label": "Vocal",
+      "genre": "jazz",
+      "status": "approved",
+      "sonic_definition": "Jazz centered on the vocal as the lead improvising voice, with jazz phrasing, diction, and repertoire."
+    },
+    {
+      "id": "jazz.swing",
+      "label": "Swing",
+      "genre": "jazz",
+      "status": "approved",
+      "sonic_definition": "Jazz of the swing tradition built on a propulsive shuffle rhythm and arranged ensemble writing."
+    },
+    {
+      "id": "jazz.bigband",
+      "label": "Big Band",
+      "genre": "jazz",
+      "status": "approved",
+      "sonic_definition": "Jazz for a large orchestrated ensemble of reeds, brass, and rhythm, emphasizing arranged sections interleaved with solos."
+    },
+    {
+      "id": "jazz.soul",
+      "label": "Soul",
+      "genre": "jazz",
+      "status": "approved",
+      "sonic_definition": "Jazz built on bluesy grooves, repeating vamps, and gospel- and blues-derived vocabulary."
+    },
+    {
+      "id": "electronic.house",
+      "label": "House",
+      "genre": "electronic",
+      "status": "approved",
+      "sonic_definition": "Electronic built on a four-on-the-floor kick, swung hi-hats, and repeating bass-and-riff grooves developed within House."
+    },
+    {
+      "id": "electronic.techno",
+      "label": "Techno",
+      "genre": "electronic",
+      "status": "approved",
+      "sonic_definition": "Electronic built on machine-driven repetition, stark synthetic timbres, and a relentless groove developed within Techno."
+    },
+    {
+      "id": "electronic.idm",
+      "label": "IDM",
+      "genre": "electronic",
+      "status": "approved",
+      "sonic_definition": "Electronic emphasizing intricate programmed rhythm, digital DSP, and headphone-oriented detail over dancefloor function."
+    },
+    {
+      "id": "electronic.darkwave",
+      "label": "Darkwave",
+      "genre": "electronic",
+      "status": "approved",
+      "sonic_definition": "Electronic using cold synth pads, deep bass, drum-machine rhythm, and a melancholic post-punk atmosphere."
+    },
+    {
+      "id": "electronic.synthpop",
+      "label": "Synthpop",
+      "genre": "electronic",
+      "status": "approved",
+      "sonic_definition": "Electronic built on song form, prominent synthesizer hooks, and pop vocal delivery."
+    },
+    {
+      "id": "electronic.rock",
+      "label": "Rock",
+      "genre": "electronic",
+      "status": "approved",
+      "sonic_definition": "Electronic fusing sequenced rhythm and synthetic timbres with rock instrumentation, riffing, or vocal attack."
     }
   ],
   "traits": [

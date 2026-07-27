@@ -33,10 +33,11 @@ ROOT = Path(__file__).resolve().parent
 REPORT = ROOT / ".local" / "nas-full-report.md"
 
 DEFAULT_ROOT = "/mnt/nas-music"
-DEFAULT_SCOPES = ["Metal", "Core", "Alternative", "Rock"]
+DEFAULT_SCOPES = ["Metal", "Core", "Alternative", "Rock", "Jazz", "Traditional Pop", "Electronic"]
 SCOPE_GENRES = {
     "metal", "metalcore", "deathcore", "rock",
     "hardcore", "punk", "grunge", "numetal", "emoviolence",
+    "jazz", "traditionalpop", "electronic",
 }
 METADATA_NFOS = {"album.nfo", "artist.nfo"}
 

@@ -6,6 +6,38 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 as described in `spec.md` §13.
 
+## [0.4.0] — 2026-07-27
+
+### Added
+
+- **Electronic** Genre with Types `electronic.house` (House Electronic),
+  `electronic.techno` (Techno Electronic), `electronic.idm` (IDM Electronic),
+  `electronic.darkwave` (Darkwave Electronic), `electronic.synthpop` (Synthpop Electronic), and
+  `electronic.rock` (Rock Electronic, for electronic-rock hybrids).
+- Six conformance cases (C066–C071).
+
+### Notes
+
+- The v0.2 `electronic` **Trait** is unchanged and coexists with the new `electronic` **Genre**
+  (separate namespaces; distinct renders — Trait "Electronic Metalcore" vs Genre "House
+  Electronic"). Driven by organizing the NAS `Electronic/` folder by Type subfolder, matching the
+  Jazz/Traditional Pop pattern.
+
+## [0.3.0] — 2026-07-27
+
+### Added
+
+- **Jazz** Genre with Types `jazz.vocal` (Vocal Jazz), `jazz.swing` (Swing Jazz),
+  `jazz.bigband` (Big Band Jazz), and `jazz.soul` (Soul Jazz).
+- **Traditional Pop** Genre (bare).
+- Five conformance cases (C061–C065).
+
+### Notes
+
+- Additive only; no existing classification is affected. Driven by auditing the NAS `Jazz/`
+  folder, which conflated real Jazz with Traditional Pop (Sinatra, Crosby, …). The two are now
+  separate Genre families, organized by Type subfolder so the classification is folder-derivable.
+
 ## [0.2.0] — 2026-07-27
 
 ### Added

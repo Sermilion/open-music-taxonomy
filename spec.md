@@ -1,6 +1,6 @@
 # Open Music Taxonomy Classification Specification
 
-Version: `0.2.0`
+Version: `0.4.0`
 
 Status: Released
 
@@ -278,6 +278,18 @@ longer approved for new classifications. v0.2.0 is otherwise additive (new Genre
 Punk, Grunge, Nu Metal, and Emoviolence; the `electronic` Trait), so non-`post` v0.1
 classifications remain valid without change.
 
+### v0.3.0
+
+Additive only: the **Jazz** Genre (Types `jazz.vocal`, `jazz.swing`, `jazz.bigband`,
+`jazz.soul`) and the **Traditional Pop** Genre are added. No existing classification is affected.
+
+### v0.4.0
+
+Additive only: the **Electronic** Genre (Types `electronic.house`, `electronic.techno`,
+`electronic.idm`, `electronic.darkwave`, `electronic.synthpop`, `electronic.rock`) is added.
+The pre-existing `electronic` **Trait** is unchanged and coexists with the new Genre (distinct
+namespaces, distinct renders — e.g. Trait "Electronic Metalcore" vs Genre "House Electronic").
+
 ## 14. Application profiles
 
 The base standard requires only Genre and permits Unknown. Applications MAY declare a named,
@@ -336,7 +348,7 @@ accepted under the license that already applies to the files being changed.
   "schema": "open-music-taxonomy/classification/0.1",
   "taxonomy": {
     "id": "open-music-taxonomy",
-    "version": "0.2.0"
+    "version": "0.4.0"
   },
   "scope": "album",
   "genre": "metal",
