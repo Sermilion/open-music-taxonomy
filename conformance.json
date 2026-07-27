@@ -1,6 +1,6 @@
 {
   "schema": "open-music-taxonomy/conformance/0.1",
-  "taxonomy": {"id": "open-music-taxonomy", "version": "0.4.0"},
+  "taxonomy": {"id": "open-music-taxonomy", "version": "0.5.0"},
   "cases": [
     {
       "id": "C001", "name": "Metal", "expected": "valid", "display": "Metal",
@@ -298,6 +298,14 @@
     {
       "id": "C071", "name": "Rock Electronic", "expected": "valid", "display": "Rock Electronic",
       "classification": {"genre": "electronic", "traits": [], "types": [{"id": "electronic.rock", "priority": 1}]}
+    },
+    {
+      "id": "C072", "name": "R&B", "expected": "valid", "display": "R&B",
+      "classification": {"genre": "rnb", "traits": [], "types": []}
+    },
+    {
+      "id": "C073", "name": "Alternative R&B", "expected": "valid", "display": "Alternative R&B",
+      "classification": {"genre": "rnb", "traits": [], "types": [{"id": "rnb.alternative", "priority": 1}]}
     }
   ],
   "equivalence_assertions": [

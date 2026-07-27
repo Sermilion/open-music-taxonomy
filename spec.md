@@ -1,6 +1,6 @@
 # Open Music Taxonomy Classification Specification
 
-Version: `0.4.0`
+Version: `0.5.0`
 
 Status: Released
 
@@ -290,6 +290,13 @@ Additive only: the **Electronic** Genre (Types `electronic.house`, `electronic.t
 The pre-existing `electronic` **Trait** is unchanged and coexists with the new Genre (distinct
 namespaces, distinct renders — e.g. Trait "Electronic Metalcore" vs Genre "House Electronic").
 
+### v0.5.0
+
+Additive only: the **R&B** Genre (Type `rnb.alternative`) is added. No existing classification is
+affected. The electronic production characteristic of much Alternative R&B is intrinsic to that
+Type's sonic definition and is therefore not separately modeled as the `electronic` Trait on these
+classifications.
+
 ## 14. Application profiles
 
 The base standard requires only Genre and permits Unknown. Applications MAY declare a named,
@@ -348,7 +355,7 @@ accepted under the license that already applies to the files being changed.
   "schema": "open-music-taxonomy/classification/0.1",
   "taxonomy": {
     "id": "open-music-taxonomy",
-    "version": "0.4.0"
+    "version": "0.5.0"
   },
   "scope": "album",
   "genre": "metal",

@@ -1,7 +1,7 @@
 {
   "schema": "open-music-taxonomy/taxonomy/0.1",
   "id": "open-music-taxonomy",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "language": "en",
   "genres": [
     {
@@ -75,6 +75,12 @@
       "label": "Electronic",
       "status": "approved",
       "sonic_definition": "Music built primarily on electronically generated or sampled timbres, sequenced or programmed rhythm, and studio-as-instrument production, developed within Electronic music."
+    },
+    {
+      "id": "rnb",
+      "label": "R&B",
+      "status": "approved",
+      "sonic_definition": "Vocal-centered popular music built on gospel- and blues-derived singing, groove-based rhythm, and expressive melisma, developed within the Rhythm and Blues tradition."
     }
   ],
   "types": [
@@ -269,6 +275,13 @@
       "genre": "electronic",
       "status": "approved",
       "sonic_definition": "Electronic fusing sequenced rhythm and synthetic timbres with rock instrumentation, riffing, or vocal attack."
+    },
+    {
+      "id": "rnb.alternative",
+      "label": "Alternative",
+      "genre": "rnb",
+      "status": "approved",
+      "sonic_definition": "R&B using atmospheric production, electronic and synthesized timbres, introspective songwriting, and the vocal and arrangement vocabularies established by Alternative R&B."
     }
   ],
   "traits": [

@@ -6,6 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 as described in `spec.md` §13.
 
+## [0.5.0] — 2026-07-27
+
+### Added
+
+- **R&B** Genre (`rnb`, label "R&B") with Type `rnb.alternative` (Alternative R&B), covering the
+  PBR&B / dark / atmospheric strain exemplified by The Weeknd and badXchannels.
+- Two conformance cases (C072–C073).
+
+### Notes
+
+- Additive only; no existing classification is affected. Driven by auditing the NAS `R&B/` folder,
+  whose two artists (The Weeknd, badXchannels) were previously mislabeled "Electronic". The
+  electronic production characteristic of Alternative R&B is intrinsic to that Type's sonic
+  definition, so it is not separately tagged via the `electronic` Trait — keeping each artist's
+  genre folder-derivable (Type subfolder), consistent with the Jazz / Traditional Pop / Electronic
+  families.
+
 ## [0.4.0] — 2026-07-27
 
 ### Added
