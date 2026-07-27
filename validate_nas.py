@@ -33,11 +33,11 @@ ROOT = Path(__file__).resolve().parent
 REPORT = ROOT / ".local" / "nas-full-report.md"
 
 DEFAULT_ROOT = "/mnt/nas-music"
-DEFAULT_SCOPES = ["Metal", "Core", "Alternative", "Rock", "Jazz", "Traditional Pop", "Electronic"]
+DEFAULT_SCOPES = ["Metal", "Core", "Alternative", "Rock", "Jazz", "Traditional Pop", "Electronic", "R&B"]
 SCOPE_GENRES = {
     "metal", "metalcore", "deathcore", "rock",
     "hardcore", "punk", "grunge", "numetal", "emoviolence",
-    "jazz", "traditionalpop", "electronic",
+    "jazz", "traditionalpop", "electronic", "rnb",
 }
 METADATA_NFOS = {"album.nfo", "artist.nfo"}
 
@@ -118,6 +118,29 @@ def build_render_index(validator: Validator) -> dict[str, dict[str, Any]]:
                             "types": base_types}
                     key = validator.render(cls2).lower()
                     index[key] = prefer(index.get(key), cls2)
+
+    # Short type-label folders: a folder named "Techno" must resolve to the same
+    # classification as the full render "Techno Electronic", mirroring tidalwatch's
+    # label-alias resolver. Only unambiguous labels qualify (a single render, and
+    # not itself a display string), so "Rock"/"Gothic" are excluded. Without this,
+    # short type-label subfolders (Electronic/House, R&B/Alternative, …) are
+    # falsely reported as taxonomy coverage gaps.
+    renders_seen = set(index.keys())
+    label_renders: dict[str, set[str]] = {}
+    for genre_id, genre in validator.genres.items():
+        if genre_id not in SCOPE_GENRES or genre.get("status") != "approved":
+            continue
+        for ty in validator.taxonomy["types"]:
+            if ty["genre"] != genre_id or ty.get("status") != "approved":
+                continue
+            r = validator.render({"genre": genre_id, "traits": [],
+                                  "types": [{"id": ty["id"], "priority": 1}]}).lower()
+            label_renders.setdefault(ty["label"], set()).add(r)
+    for label, rs in label_renders.items():
+        if len(rs) == 1 and label.lower() not in renders_seen:
+            render_lc = next(iter(rs))
+            if render_lc in index:
+                index[label.lower()] = index[render_lc]
     return index
 
 
