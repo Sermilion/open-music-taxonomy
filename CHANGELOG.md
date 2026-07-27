@@ -6,6 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 as described in `spec.md` §13.
 
+## [0.6.0] — 2026-07-27
+
+### Added
+
+- **Hip-Hop** Genre (`hiphop`, label "Hip-Hop") with Types `hiphop.boombap` (Boom Bap Hip-Hop),
+  `hiphop.gfunk` (G-Funk Hip-Hop), and `hiphop.trap` (Trap Hip-Hop).
+- Four conformance cases (C074–C077).
+
+### Notes
+
+- Additive only; no existing classification is affected. Driven by auditing the NAS `Rap/` and
+  `Russian/Rap/` folders (~844 files previously unresolvable). The Types are sonic production styles
+  only — lyrical/thematic labels (Gangsta, Horrorcore, Mafioso, Conscious) are excluded by §3, so
+  the West-Coast artists popularly called "Gangsta Rap" are classified by their sound (G-Funk).
+- The `Rap/` folder remains the organizational bucket; the Type is derived from the type subfolder
+  underneath, consistent with the Jazz / Electronic / R&B families.
+
 ## [0.5.0] — 2026-07-27
 
 ### Added

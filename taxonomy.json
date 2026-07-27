@@ -1,7 +1,7 @@
 {
   "schema": "open-music-taxonomy/taxonomy/0.1",
   "id": "open-music-taxonomy",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "language": "en",
   "genres": [
     {
@@ -81,6 +81,12 @@
       "label": "R&B",
       "status": "approved",
       "sonic_definition": "Vocal-centered popular music built on gospel- and blues-derived singing, groove-based rhythm, and expressive melisma, developed within the Rhythm and Blues tradition."
+    },
+    {
+      "id": "hiphop",
+      "label": "Hip-Hop",
+      "status": "approved",
+      "sonic_definition": "Vocal-centered music built on rapped or chanted delivery over looped, sampled, or programmed rhythm, developed within the Hip-Hop tradition."
     }
   ],
   "types": [
@@ -282,6 +288,27 @@
       "genre": "rnb",
       "status": "approved",
       "sonic_definition": "R&B using atmospheric production, electronic and synthesized timbres, introspective songwriting, and the vocal and arrangement vocabularies established by Alternative R&B."
+    },
+    {
+      "id": "hiphop.boombap",
+      "label": "Boom Bap",
+      "genre": "hiphop",
+      "status": "approved",
+      "sonic_definition": "Hip-Hop built on sampled acoustic-drum breaks and gritty mid-tempo loops with an MC-centered vocal, characteristic of 1990s East Coast and underground production."
+    },
+    {
+      "id": "hiphop.gfunk",
+      "label": "G-Funk",
+      "genre": "hiphop",
+      "status": "approved",
+      "sonic_definition": "Hip-Hop built on high synthesizer lead lines, funk-derived samples, and a laid-back West Coast groove developed within G-Funk."
+    },
+    {
+      "id": "hiphop.trap",
+      "label": "Trap",
+      "genre": "hiphop",
+      "status": "approved",
+      "sonic_definition": "Hip-Hop built on rapid programmed hi-hat patterns, deep 808 bass, and dark synthetic production developed within Trap."
     }
   ],
   "traits": [

@@ -1,6 +1,6 @@
 # Open Music Taxonomy Classification Specification
 
-Version: `0.5.0`
+Version: `0.6.0`
 
 Status: Released
 
@@ -297,6 +297,14 @@ affected. The electronic production characteristic of much Alternative R&B is in
 Type's sonic definition and is therefore not separately modeled as the `electronic` Trait on these
 classifications.
 
+### v0.6.0
+
+Additive only: the **Hip-Hop** Genre (Types `hiphop.boombap`, `hiphop.gfunk`, `hiphop.trap`) is
+added. No existing classification is affected. The Types are strictly sonic production styles;
+lyrical or thematic labels current in popular use (Gangsta, Horrorcore, Mafioso, Conscious) are
+not classification atoms under §3, so the West-Coast artists historically called "Gangsta Rap" are
+classified here by their sound (the G-Funk Type).
+
 ## 14. Application profiles
 
 The base standard requires only Genre and permits Unknown. Applications MAY declare a named,
@@ -355,7 +363,7 @@ accepted under the license that already applies to the files being changed.
   "schema": "open-music-taxonomy/classification/0.1",
   "taxonomy": {
     "id": "open-music-taxonomy",
-    "version": "0.5.0"
+    "version": "0.6.0"
   },
   "scope": "album",
   "genre": "metal",

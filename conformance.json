@@ -1,6 +1,6 @@
 {
   "schema": "open-music-taxonomy/conformance/0.1",
-  "taxonomy": {"id": "open-music-taxonomy", "version": "0.5.0"},
+  "taxonomy": {"id": "open-music-taxonomy", "version": "0.6.0"},
   "cases": [
     {
       "id": "C001", "name": "Metal", "expected": "valid", "display": "Metal",
@@ -306,6 +306,22 @@
     {
       "id": "C073", "name": "Alternative R&B", "expected": "valid", "display": "Alternative R&B",
       "classification": {"genre": "rnb", "traits": [], "types": [{"id": "rnb.alternative", "priority": 1}]}
+    },
+    {
+      "id": "C074", "name": "Hip-Hop", "expected": "valid", "display": "Hip-Hop",
+      "classification": {"genre": "hiphop", "traits": [], "types": []}
+    },
+    {
+      "id": "C075", "name": "Boom Bap Hip-Hop", "expected": "valid", "display": "Boom Bap Hip-Hop",
+      "classification": {"genre": "hiphop", "traits": [], "types": [{"id": "hiphop.boombap", "priority": 1}]}
+    },
+    {
+      "id": "C076", "name": "G-Funk Hip-Hop", "expected": "valid", "display": "G-Funk Hip-Hop",
+      "classification": {"genre": "hiphop", "traits": [], "types": [{"id": "hiphop.gfunk", "priority": 1}]}
+    },
+    {
+      "id": "C077", "name": "Trap Hip-Hop", "expected": "valid", "display": "Trap Hip-Hop",
+      "classification": {"genre": "hiphop", "traits": [], "types": [{"id": "hiphop.trap", "priority": 1}]}
     }
   ],
   "equivalence_assertions": [

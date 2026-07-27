@@ -2,7 +2,7 @@
   "schema": "open-music-taxonomy/reference-albums/0.1",
   "taxonomy": {
     "id": "open-music-taxonomy",
-    "version": "0.5.0"
+    "version": "0.6.0"
   },
   "purpose": "Pilot corpus derived from locally owned releases. Album identities and sonic observations are public; audio files remain local and excluded from version control.",
   "albums": [
