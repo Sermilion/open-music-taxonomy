@@ -107,6 +107,9 @@
           "properties": {
             "genre": {
               "$ref": "#/$defs/id"
+            },
+            "join_next": {
+              "enum": ["space", "hyphen", "concatenate"]
             }
           }
         }

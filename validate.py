@@ -150,7 +150,7 @@ class Validator:
         )
         for index, item in enumerate(ordered_types):
             type_atom = self.types[item["id"]]
-            join_next = "hyphen" if index < len(ordered_types) - 1 else "space"
+            join_next = type_atom.get("join_next", "hyphen" if index < len(ordered_types) - 1 else "space")
             tokens.append((type_atom["label"], join_next))
         tokens.append((self.genres[genre_id]["label"], "space"))
 
@@ -194,8 +194,8 @@ def run() -> int:
         failures.append("corpus taxonomy version does not match taxonomy package")
 
     cases = corpus["cases"]
-    if len(cases) != 50:
-        failures.append(f"expected 50 conformance cases, found {len(cases)}")
+    if len(cases) != 60:
+        failures.append(f"expected 60 conformance cases, found {len(cases)}")
 
     case_by_id: dict[str, dict[str, Any]] = {}
     for case in cases:

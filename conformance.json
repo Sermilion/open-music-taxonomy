@@ -1,6 +1,6 @@
 {
   "schema": "open-music-taxonomy/conformance/0.1",
-  "taxonomy": {"id": "open-music-taxonomy", "version": "0.1.0"},
+  "taxonomy": {"id": "open-music-taxonomy", "version": "0.2.0"},
   "cases": [
     {
       "id": "C001", "name": "Metal", "expected": "valid", "display": "Metal",
@@ -35,7 +35,7 @@
       "classification": {"genre": "rock", "traits": [], "types": [{"id": "rock.hard", "priority": 1}]}
     },
     {
-      "id": "C009", "name": "Alternative Rock", "expected": "valid", "display": "Alternative Rock",
+      "id": "C009", "name": "Alt. Rock", "expected": "valid", "display": "Alt. Rock",
       "classification": {"genre": "rock", "traits": [], "types": [{"id": "rock.alternative", "priority": 1}]}
     },
     {
@@ -124,7 +124,7 @@
     },
     {
       "id": "C031", "name": "Post-Rock", "expected": "valid", "display": "Post-Rock",
-      "classification": {"genre": "rock", "traits": [{"id": "post", "priority": 1}], "types": []}
+      "classification": {"genre": "rock", "traits": [], "types": [{"id": "rock.post", "priority": 1}]}
     },
     {
       "id": "C032", "name": "Funeral Doom Metal", "expected": "valid", "display": "Funeral Doom Metal",
@@ -213,6 +213,47 @@
       "id": "C050", "name": "Technical Unknown carries a modifier", "expected": "invalid",
       "expected_error": "unknown cannot have modifiers",
       "classification": {"genre": "unknown", "traits": [{"id": "technical", "priority": 1}], "types": []}
+    },
+    {
+      "id": "C051", "name": "Post-Metal", "expected": "valid", "display": "Post-Metal",
+      "classification": {"genre": "metal", "traits": [], "types": [{"id": "metal.post", "priority": 1}]}
+    },
+    {
+      "id": "C052", "name": "Post-Hardcore", "expected": "valid", "display": "Post-Hardcore",
+      "classification": {"genre": "hardcore", "traits": [], "types": [{"id": "hardcore.post", "priority": 1}]}
+    },
+    {
+      "id": "C053", "name": "Hardcore", "expected": "valid", "display": "Hardcore",
+      "classification": {"genre": "hardcore", "traits": [], "types": []}
+    },
+    {
+      "id": "C054", "name": "Punk", "expected": "valid", "display": "Punk",
+      "classification": {"genre": "punk", "traits": [], "types": []}
+    },
+    {
+      "id": "C055", "name": "Grunge", "expected": "valid", "display": "Grunge",
+      "classification": {"genre": "grunge", "traits": [], "types": []}
+    },
+    {
+      "id": "C056", "name": "Nu Metal", "expected": "valid", "display": "Nu Metal",
+      "classification": {"genre": "numetal", "traits": [], "types": []}
+    },
+    {
+      "id": "C057", "name": "Emoviolence", "expected": "valid", "display": "Emoviolence",
+      "classification": {"genre": "emoviolence", "traits": [], "types": []}
+    },
+    {
+      "id": "C058", "name": "Electronic Metalcore", "expected": "valid", "display": "Electronic Metalcore",
+      "classification": {"genre": "metalcore", "traits": [{"id": "electronic", "priority": 1}], "types": []}
+    },
+    {
+      "id": "C059", "name": "Electronic Post-Hardcore", "expected": "valid", "display": "Electronic Post-Hardcore",
+      "classification": {"genre": "hardcore", "traits": [{"id": "electronic", "priority": 1}], "types": [{"id": "hardcore.post", "priority": 1}]}
+    },
+    {
+      "id": "C060", "name": "Deprecated Post Trait rejected", "expected": "invalid",
+      "expected_error": "trait post is not approved",
+      "classification": {"genre": "metal", "traits": [{"id": "post", "priority": 1}], "types": []}
     }
   ],
   "equivalence_assertions": [

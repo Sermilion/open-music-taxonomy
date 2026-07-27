@@ -1,7 +1,7 @@
 {
   "schema": "open-music-taxonomy/taxonomy/0.1",
   "id": "open-music-taxonomy",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "language": "en",
   "genres": [
     {
@@ -27,6 +27,36 @@
       "label": "Deathcore",
       "status": "approved",
       "sonic_definition": "Heavy music combining Death Metal riffing and extreme-vocal vocabulary with breakdown-centered Core arrangements."
+    },
+    {
+      "id": "hardcore",
+      "label": "Hardcore",
+      "status": "approved",
+      "sonic_definition": "Punk-derived amplified music built around velocity, brevity, and beat-driven or breakdown-centered rhythmic structures developed within Hardcore."
+    },
+    {
+      "id": "punk",
+      "label": "Punk",
+      "status": "approved",
+      "sonic_definition": "High-energy amplified music built on tempo, downstroke guitar, direct vocal delivery, and anti-virtuosic brevity developed within Punk."
+    },
+    {
+      "id": "grunge",
+      "label": "Grunge",
+      "status": "approved",
+      "sonic_definition": "Rock combining heavy distorted guitar riffs, loud-quiet dynamic contrast, and introspective songwriting vocabularies developed within Grunge."
+    },
+    {
+      "id": "numetal",
+      "label": "Nu Metal",
+      "status": "approved",
+      "sonic_definition": "Metal combining down-tuned groove riffing with influences from Hip-Hop, Alternative Rock, and electronic production developed within Nu Metal."
+    },
+    {
+      "id": "emoviolence",
+      "label": "Emoviolence",
+      "status": "approved",
+      "sonic_definition": "Extreme music fusing Screamo-derived emotion and dissonance with Grindcore blast velocity and brevity, developed within Emoviolence."
     }
   ],
   "types": [
@@ -116,7 +146,7 @@
     },
     {
       "id": "rock.alternative",
-      "label": "Alternative",
+      "label": "Alt.",
       "genre": "rock",
       "status": "approved",
       "sonic_definition": "Rock using the contrasting timbres, dynamics, and songwriting vocabularies established by Alternative Rock."
@@ -127,6 +157,30 @@
       "genre": "rock",
       "status": "approved",
       "sonic_definition": "Rock using dark post-punk-derived bass, guitar, vocal, and atmospheric vocabularies established by Gothic Rock."
+    },
+    {
+      "id": "metal.post",
+      "label": "Post",
+      "genre": "metal",
+      "status": "approved",
+      "sonic_definition": "Metal that audibly moves beyond conventional Metal song forms through texture, development, and structural abstraction.",
+      "join_next": "hyphen"
+    },
+    {
+      "id": "rock.post",
+      "label": "Post",
+      "genre": "rock",
+      "status": "approved",
+      "sonic_definition": "Rock that audibly moves beyond conventional Rock song forms through texture, development, and structural abstraction.",
+      "join_next": "hyphen"
+    },
+    {
+      "id": "hardcore.post",
+      "label": "Post",
+      "genre": "hardcore",
+      "status": "approved",
+      "sonic_definition": "Hardcore that audibly moves beyond conventional Hardcore song forms through texture, development, and structural abstraction.",
+      "join_next": "hyphen"
     }
   ],
   "traits": [
@@ -198,7 +252,7 @@
     {
       "id": "post",
       "label": "Post",
-      "status": "approved",
+      "status": "deprecated",
       "sonic_definition": "The music audibly moves beyond the base Genre's conventional song forms through texture, development, and structural abstraction.",
       "join_next": "hyphen"
     },
@@ -236,6 +290,12 @@
       "sonic_definition": "Hardcore-derived rhythm, vocal delivery, and arrangement materially shape the Thrash Metal sound.",
       "applicable_genres": ["metal"],
       "required_types": ["metal.thrash"]
+    },
+    {
+      "id": "electronic",
+      "label": "Electronic",
+      "status": "approved",
+      "sonic_definition": "Synthesized timbres, electronic instrumentation, programmed or sequenced rhythm, and production techniques developed within Electronic music materially shape the sound."
     }
   ]
 }

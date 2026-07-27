@@ -1,6 +1,6 @@
 # Open Music Taxonomy Classification Specification
 
-Version: `0.1.0`
+Version: `0.2.0`
 
 Status: Released
 
@@ -107,7 +107,9 @@ Examples:
 - `blackened`, `viking`, `pirate`, and `neoclassical` are constrained to Metal;
 - `funeral` is constrained to Metal classifications containing the Doom Type;
 - `crossover` is constrained to Metal classifications containing the Thrash Type;
-- `post` is a global Trait with a canonical hyphen join rule.
+- `post` was a global Trait in v0.1; in v0.2 it is deprecated as a Trait and provided as a
+  Genre-owned Type (`metal.post`, `rock.post`, `hardcore.post`) that retains the canonical
+  hyphen join. See the v0.2.0 migration note in §13.
 
 ### 4.4 Priority
 
@@ -212,7 +214,8 @@ Taxonomy IDs are metadata identities. Display labels are presentation.
 - The default token separator is one space.
 - Adjacent Types MUST be joined with a hyphen, making composites explicit:
   `Death-Doom Metal`, not `Death Doom Metal`.
-- A taxonomy atom MAY define a canonical join rule, such as the hyphen in `Post-Rock`.
+- A taxonomy atom — Trait or Type — MAY define a canonical join rule, such as the hyphen in
+  `Post-Rock` (the `rock.post` Type) or `Post-Metal` (the `metal.post` Type).
 
 Canonical spellings are normative. `Death Rock` and `Deathrock` are not automatically equivalent.
 Deathrock is deferred from v0.1 and no approved Rock atom is created merely because the word exists.
@@ -264,6 +267,16 @@ explicit replacement. Applications MUST preview and explicitly execute taxonomy 
 MUST NOT silently reinterpret libraries against the latest release.
 
 Schema version and taxonomy version are independent.
+
+### v0.2.0 migration
+
+The `post` Trait is deprecated and replaced by Genre-owned `post` Types (`metal.post`,
+`rock.post`, `hardcore.post`). Classifications using `traits: [post]` MUST be migrated to
+`types: [<genre>.post]`; for example, v0.1 Post-Rock (`genre: rock, traits: [post]`) becomes
+`genre: rock, types: [rock.post]`. The deprecated `post` Trait ID remains resolvable; it is no
+longer approved for new classifications. v0.2.0 is otherwise additive (new Genres Hardcore,
+Punk, Grunge, Nu Metal, and Emoviolence; the `electronic` Trait), so non-`post` v0.1
+classifications remain valid without change.
 
 ## 14. Application profiles
 
@@ -323,7 +336,7 @@ accepted under the license that already applies to the files being changed.
   "schema": "open-music-taxonomy/classification/0.1",
   "taxonomy": {
     "id": "open-music-taxonomy",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "scope": "album",
   "genre": "metal",
