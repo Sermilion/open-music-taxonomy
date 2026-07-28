@@ -1,6 +1,6 @@
 # Open Music Taxonomy Classification Specification
 
-Version: `0.6.0`
+Version: `0.7.0`
 
 Status: Released
 
@@ -305,6 +305,12 @@ lyrical or thematic labels current in popular use (Gangsta, Horrorcore, Mafioso,
 not classification atoms under §3, so the West-Coast artists historically called "Gangsta Rap" are
 classified here by their sound (the G-Funk Type).
 
+### v0.7.0
+
+Additive only: the **Screamo** and **Emocore** Genres are added (peer standalone genres to
+`emoviolence`, `hardcore`, and `punk`). No existing classification is affected. Both are modeled
+by their sonic characteristics (vocal delivery, dynamics, instrumentation) per §3.
+
 ## 14. Application profiles
 
 The base standard requires only Genre and permits Unknown. Applications MAY declare a named,
@@ -363,7 +369,7 @@ accepted under the license that already applies to the files being changed.
   "schema": "open-music-taxonomy/classification/0.1",
   "taxonomy": {
     "id": "open-music-taxonomy",
-    "version": "0.6.0"
+    "version": "0.7.0"
   },
   "scope": "album",
   "genre": "metal",

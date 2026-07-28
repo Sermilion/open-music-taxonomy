@@ -1,6 +1,6 @@
 {
   "schema": "open-music-taxonomy/conformance/0.1",
-  "taxonomy": {"id": "open-music-taxonomy", "version": "0.6.0"},
+  "taxonomy": {"id": "open-music-taxonomy", "version": "0.7.0"},
   "cases": [
     {
       "id": "C001", "name": "Metal", "expected": "valid", "display": "Metal",
@@ -322,6 +322,14 @@
     {
       "id": "C077", "name": "Trap Hip-Hop", "expected": "valid", "display": "Trap Hip-Hop",
       "classification": {"genre": "hiphop", "traits": [], "types": [{"id": "hiphop.trap", "priority": 1}]}
+    },
+    {
+      "id": "C078", "name": "Screamo", "expected": "valid", "display": "Screamo",
+      "classification": {"genre": "screamo", "traits": [], "types": []}
+    },
+    {
+      "id": "C079", "name": "Emocore", "expected": "valid", "display": "Emocore",
+      "classification": {"genre": "emocore", "traits": [], "types": []}
     }
   ],
   "equivalence_assertions": [

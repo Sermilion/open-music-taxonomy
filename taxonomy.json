@@ -1,7 +1,7 @@
 {
   "schema": "open-music-taxonomy/taxonomy/0.1",
   "id": "open-music-taxonomy",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "language": "en",
   "genres": [
     {
@@ -87,6 +87,18 @@
       "label": "Hip-Hop",
       "status": "approved",
       "sonic_definition": "Vocal-centered music built on rapped or chanted delivery over looped, sampled, or programmed rhythm, developed within the Hip-Hop tradition."
+    },
+    {
+      "id": "screamo",
+      "label": "Screamo",
+      "status": "approved",
+      "sonic_definition": "Hardcore-derived music built on frantic dynamic contrast between quiet melodic passages and explosive screamed vocals, dissonant guitars, and chaotic arrangements developed within Screamo."
+    },
+    {
+      "id": "emocore",
+      "label": "Emocore",
+      "status": "approved",
+      "sonic_definition": "Hardcore punk emphasizing confessional, emotionally intense vocals and melodic guitar work within concise song forms, developed within emotional hardcore (Emocore)."
     }
   ],
   "types": [

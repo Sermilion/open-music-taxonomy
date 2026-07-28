@@ -6,6 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 as described in `spec.md` §13.
 
+## [0.7.0] — 2026-07-28
+
+### Added
+
+- **Screamo** Genre (`screamo`) and **Emocore** Genre (`emocore`) — peer standalone genres to
+  `emoviolence`, `hardcore`, and `punk`, homing the Russian-scene screamo and emocore artists
+  (`Russian/Screamo/`, formerly `Russian/New Wave Emocore/` → `Russian/Emocore/`).
+- Two conformance cases (C078–C079).
+
+### Notes
+
+- Additive only; no existing classification is affected. Both genres are defined by sonic
+  characteristics (vocal delivery, dynamics, instrumentation) per §3. "New Wave" (a temporal/scene
+  descriptor) is dropped from the folder name in favor of the sonic genre "Emocore".
+
 ## [0.6.0] — 2026-07-27
 
 ### Added
