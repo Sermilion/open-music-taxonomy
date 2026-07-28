@@ -33,11 +33,13 @@ ROOT = Path(__file__).resolve().parent
 REPORT = ROOT / ".local" / "nas-full-report.md"
 
 DEFAULT_ROOT = "/mnt/nas-music"
-DEFAULT_SCOPES = ["Metal", "Core", "Alternative", "Rock", "Jazz", "Traditional Pop", "Electronic", "R&B", "Rap"]
+DEFAULT_SCOPES = ["Metal", "Core", "Alternative", "Rock", "Jazz", "Traditional Pop",
+                  "Electronic", "R&B", "Rap", "Russian", "Asian"]
 SCOPE_GENRES = {
-    "metal", "metalcore", "deathcore", "rock",
+    "metal", "metalcore", "deathcore", "thall", "rock",
     "hardcore", "punk", "grunge", "numetal", "emoviolence",
     "jazz", "traditionalpop", "electronic", "rnb", "hiphop",
+    "screamo", "emocore",
 }
 METADATA_NFOS = {"album.nfo", "artist.nfo"}
 
@@ -79,7 +81,7 @@ def build_render_index(validator: Validator) -> dict[str, dict[str, Any]]:
                   if tr.get("status") == "approved"
                   and (not tr.get("applicable_genres")
                        or genre_id in tr["applicable_genres"])]
-        # Bare genre (no type): metalcore/deathcore/rock/metal have no sub-types
+        # Bare genre (no type): metalcore/deathcore/thall/rock/metal have no sub-types
         # and are valid classifications on their own.
         bare = {"genre": genre_id, "traits": [], "types": []}
         index[validator.render(bare).lower()] = prefer(
@@ -127,6 +129,7 @@ def build_render_index(validator: Validator) -> dict[str, dict[str, Any]]:
     # falsely reported as taxonomy coverage gaps.
     renders_seen = set(index.keys())
     label_renders: dict[str, set[str]] = {}
+    alias_labels: set[str] = set()
     for genre_id, genre in validator.genres.items():
         if genre_id not in SCOPE_GENRES or genre.get("status") != "approved":
             continue
@@ -138,25 +141,53 @@ def build_render_index(validator: Validator) -> dict[str, dict[str, Any]]:
             label_renders.setdefault(ty["label"], set()).add(r)
     for label, rs in label_renders.items():
         if len(rs) == 1 and label.lower() not in renders_seen:
+            alias_labels.add(label.lower())
             render_lc = next(iter(rs))
             if render_lc in index:
                 index[label.lower()] = index[render_lc]
-    return index
+    return index, alias_labels
 
 
-def subgenre_of(path: str, root: str) -> str | None:
-    """First directory component under the scope root: <root>/<Scope>/<SUBGENRE>/..."""
-    try:
-        rel = os.path.relpath(path, root)
-    except ValueError:
-        return None
-    parts = rel.split(os.sep)
-    # parts[0]=Scope, parts[1]=subgenre, ...
-    return parts[1] if len(parts) > 1 else None
+def folder_genre_cls(parts: list[str], index: dict[str, dict],
+                     alias_labels: set[str]) -> dict[str, Any] | None:
+    """Derive the on-disk folder genre, mirroring tidalwatch's ``resolve_genre``.
+
+    ``parts[0]`` is the scope root (a family/region bucket, not itself a genre);
+    ``parts[1:]`` is the path under it. Walk it and resolve by precedence so that
+    nested genre folders (``Asian/Metal/Black Metal`` -> "Black Metal") and
+    region+family nesting (``Russian/Rap/Boom Bap`` -> "Boom Bap Hip-Hop") resolve
+    correctly, while a short Type-label alias that collides with an artist/album
+    name deeper in the path (band "Death" under "Melodic Death Metal") does NOT
+    override the real genre folder:
+
+    * **strong** — a full canonical render at depth >= 1 (a real subgenre folder
+      such as "Black Metal" or bare "Metal" under a region). Deepest wins.
+    * **alias** — a short Type-label folder ("Vocal", "Boom Bap"), any depth.
+    * **weak** — the scope root itself when it is a bare Genre ("Jazz"), used only
+      when nothing more specific matches.
+    """
+    strong: dict[str, Any] | None = None
+    strong_d = -1
+    alias: dict[str, Any] | None = None
+    alias_d = -1
+    for depth, seg in enumerate(parts[1:], start=1):
+        seg_n = normalize(seg)
+        if seg_n not in index:
+            continue
+        if seg_n in alias_labels:
+            if depth > alias_d:
+                alias, alias_d = index[seg_n], depth
+        elif depth > strong_d:
+            strong, strong_d = index[seg_n], depth
+    if strong is not None:
+        return strong
+    if alias is not None:
+        return alias
+    return index.get(normalize(parts[0])) if parts else None
 
 
 def audit(validator: Validator, root: str, scopes: list[str]) -> dict[str, Any]:
-    index = build_render_index(validator)
+    index, alias_labels = build_render_index(validator)
     stats: dict[str, Any] = {
         "per_scope": {},
         "per_subgenre": defaultdict(lambda: Counter()),
@@ -195,26 +226,26 @@ def audit(validator: Validator, root: str, scopes: list[str]) -> dict[str, Any]:
                 continue
 
             genre_raw = xml.findtext("genre") or ""
-            sub = subgenre_of(nfo, root)
-            sub_norm = normalize(sub) if sub else ""
+            rel = os.path.relpath(nfo, root)
+            parts = rel.split(os.sep)
             nfo_norm = normalize(genre_raw)
 
-            sub_cls = index.get(sub_norm)
+            folder_cls = folder_genre_cls(parts, index, alias_labels)
             nfo_cls = index.get(nfo_norm)
 
-            # Subgenre accounting.
-            if sub:
-                bucket = stats["per_subgenre"][f"{scope}/{sub}"]
-                bucket["total"] += 1
-                if sub_cls:
-                    bucket["mapped_render"] = validator.render(sub_cls)
-                else:
-                    stats["unmapped_subgenres"][f"{scope}/{sub}"] += 1
-                    bucket["unmapped"] += 1
+            # Folder accounting — unmapped when no genre is derivable from the path.
+            sub_label = parts[1] if len(parts) > 1 else scope
+            bucket = stats["per_subgenre"][f"{scope}/{sub_label}"]
+            bucket["total"] += 1
+            if folder_cls:
+                bucket["mapped_render"] = validator.render(folder_cls)
+            else:
+                stats["unmapped_subgenres"][f"{scope}/{sub_label}"] += 1
+                bucket["unmapped"] += 1
 
             # NFO genre accounting.
             if not genre_raw.strip():
-                stats["empty_genre"].append(os.path.relpath(nfo, root))
+                stats["empty_genre"].append(rel)
                 s["empty_genre"] += 1
                 stats["totals"]["empty_genre"] += 1
             elif nfo_cls:
@@ -226,14 +257,14 @@ def audit(validator: Validator, root: str, scopes: list[str]) -> dict[str, Any]:
                 stats["totals"]["nfo_unmapped"] += 1
 
             # Drift: both mapped but disagree.
-            if sub_cls and nfo_cls:
-                if validator.render(sub_cls).lower() != validator.render(nfo_cls).lower():
+            if folder_cls and nfo_cls:
+                if validator.render(folder_cls).lower() != validator.render(nfo_cls).lower():
                     if len(stats["drift_samples"]) < 200:
                         stats["drift_samples"].append({
-                            "path": os.path.relpath(nfo, root),
-                            "folder": sub,
+                            "path": rel,
+                            "folder": sub_label,
                             "nfo_genre": genre_raw.strip(),
-                            "folder_render": validator.render(sub_cls),
+                            "folder_render": validator.render(folder_cls),
                             "nfo_render": validator.render(nfo_cls),
                         })
                     s["drift"] += 1
@@ -246,8 +277,8 @@ def write_report(stats: dict[str, Any], root: str) -> Path:
     lines: list[str] = []
     lines.append("# NAS Library Validation Report (full)")
     lines.append("")
-    lines.append(f"Source: `{root}/{{Metal,Core,Alternative,Rock}}`  ·  "
-                 "Open Music Taxonomy v0.2  ·  read-only audit.")
+    lines.append(f"Source: `{root}` (all in-scope genre & region folders)  ·  "
+                 "Open Music Taxonomy  ·  read-only audit.")
     lines.append("")
     lines.append("## Summary")
     lines.append("")
@@ -331,8 +362,11 @@ def write_report(stats: dict[str, Any], root: str) -> Path:
     lines.append("Conformance here is **structural**: a tag must render to a valid "
                  "taxonomy `genre + type + traits` classification. It does **not** "
                  "judge whether a label is musically correct — the NFO's own "
-                 "`<genre>` and the folder placement are trusted. `Rock/` has no "
-                 "`.nfo` files at all and is reported as 0 metadata.")
+                 "`<genre>` and the folder placement are trusted. Folder genre is "
+                 "derived the same way tidalwatch derives it (deepest genre folder, "
+                 "short Type-label aliases, bare scope-root Genre as a weak "
+                 "fallback), so region/family nesting (`Russian/Rap/Boom Bap`, "
+                 "`Asian/Metal/Black Metal`) and V.A. compilations resolve.")
     lines.append("")
 
     REPORT.write_text("\n".join(lines), encoding="utf-8")

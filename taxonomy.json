@@ -1,7 +1,7 @@
 {
   "schema": "open-music-taxonomy/taxonomy/0.1",
   "id": "open-music-taxonomy",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "language": "en",
   "genres": [
     {
@@ -27,6 +27,12 @@
       "label": "Deathcore",
       "status": "approved",
       "sonic_definition": "Heavy music combining Death Metal riffing and extreme-vocal vocabulary with breakdown-centered Core arrangements."
+    },
+    {
+      "id": "thall",
+      "label": "Thall",
+      "status": "approved",
+      "sonic_definition": "Heavy music built around palm-muted low-register riff pulses, syncopated metric displacement, and polyrhythmic groove layering as defining rhythmic vocabulary, developed within Thall."
     },
     {
       "id": "hardcore",
@@ -321,6 +327,13 @@
       "genre": "hiphop",
       "status": "approved",
       "sonic_definition": "Hip-Hop built on rapid programmed hi-hat patterns, deep 808 bass, and dark synthetic production developed within Trap."
+    },
+    {
+      "id": "electronic.breakcore",
+      "label": "Breakcore",
+      "genre": "electronic",
+      "status": "approved",
+      "sonic_definition": "Electronic built on extreme high-tempo editing of sampled breakbeats, abrupt rhythmic rupture, and dense clipped percussive collage."
     }
   ],
   "traits": [
@@ -341,7 +354,9 @@
       "label": "Blackened",
       "status": "approved",
       "sonic_definition": "Audible use of Black Metal riffing, texture, vocal, or harmonic characteristics without classification as the Black Type.",
-      "applicable_genres": ["metal"]
+      "applicable_genres": [
+        "metal"
+      ]
     },
     {
       "id": "atmospheric",
@@ -378,16 +393,24 @@
       "label": "Stoner",
       "status": "approved",
       "sonic_definition": "Fuzz-heavy timbre, repetitive groove, and psychedelic-derived riff development shape the Doom Metal sound.",
-      "applicable_genres": ["metal"],
-      "required_types": ["metal.doom"]
+      "applicable_genres": [
+        "metal"
+      ],
+      "required_types": [
+        "metal.doom"
+      ]
     },
     {
       "id": "funeral",
       "label": "Funeral",
       "status": "approved",
       "sonic_definition": "Extremely slow dirge-like pacing, sustained weight, and expansive mournful atmosphere shape the Doom Metal sound.",
-      "applicable_genres": ["metal"],
-      "required_types": ["metal.doom"]
+      "applicable_genres": [
+        "metal"
+      ],
+      "required_types": [
+        "metal.doom"
+      ]
     },
     {
       "id": "post",
@@ -407,35 +430,57 @@
       "label": "Viking",
       "status": "approved",
       "sonic_definition": "A maintainer-curated Metal sound defined by its characteristic melodic, rhythmic, vocal, and arrangement vocabulary; themes or artist origin alone do not qualify.",
-      "applicable_genres": ["metal"]
+      "applicable_genres": [
+        "metal"
+      ]
     },
     {
       "id": "pirate",
       "label": "Pirate",
       "status": "approved",
       "sonic_definition": "A maintainer-curated Metal sound defined by characteristic folk-derived melody, rhythm, vocal phrasing, and arrangement; themes or imagery alone do not qualify.",
-      "applicable_genres": ["metal"]
+      "applicable_genres": [
+        "metal"
+      ]
     },
     {
       "id": "neoclassical",
       "label": "Neoclassical",
       "status": "approved",
       "sonic_definition": "Classical harmonic language, melodic construction, formal devices, and instrumental techniques materially shape the Metal sound.",
-      "applicable_genres": ["metal"]
+      "applicable_genres": [
+        "metal"
+      ]
     },
     {
       "id": "crossover",
       "label": "Crossover",
       "status": "approved",
       "sonic_definition": "Hardcore-derived rhythm, vocal delivery, and arrangement materially shape the Thrash Metal sound.",
-      "applicable_genres": ["metal"],
-      "required_types": ["metal.thrash"]
+      "applicable_genres": [
+        "metal"
+      ],
+      "required_types": [
+        "metal.thrash"
+      ]
     },
     {
       "id": "electronic",
       "label": "Electronic",
       "status": "approved",
       "sonic_definition": "Synthesized timbres, electronic instrumentation, programmed or sequenced rhythm, and production techniques developed within Electronic music materially shape the sound."
+    },
+    {
+      "id": "depressive",
+      "label": "Depressive",
+      "status": "approved",
+      "sonic_definition": "Slow-to-mid tempos, minor-key tremolo repetition held well past resolution, thin trebly production, and strained anguished vocal delivery shape the Black Metal sound.",
+      "applicable_genres": [
+        "metal"
+      ],
+      "required_types": [
+        "metal.black"
+      ]
     }
   ]
 }

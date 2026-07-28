@@ -6,6 +6,32 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 as described in `spec.md` §13.
 
+## [0.8.0] — 2026-08-01
+
+### Added
+
+- **Depressive** Trait (`depressive`) — scoped to `metal` and gated on `required_types:
+  ["metal.black"]`, following the `stoner`/`funeral` precedent, so it can only ever qualify Black
+  Metal and never renders bare as "Depressive Metal".
+- **Breakcore** Type (`electronic.breakcore`) — homes the extreme breakbeat-editing end of
+  `Electronic/` (e.g. Igorrr), which no existing Electronic Type described.
+- Five conformance cases (C080–C084).
+- **Thall** Genre (`thall`) — peer standalone genre to `metalcore` and `deathcore`, homing
+  syncopated palm-muted groove–centered artists previously filed under Core subfolders.
+- Three conformance cases (C085–C087).
+
+### Notes
+
+- Additive only; no existing classification is affected.
+- Thall is driven by the NAS `Core/` library, where several artists fit the thall groove
+  vocabulary more precisely than Metalcore or Deathcore alone.
+- Depressive / Breakcore driven by auditing the NAS `Metal/Black Metal/` folder, where two artists
+  were unclassifiable under v0.7.
+- C083–C084 pin a render that **already worked but was never asserted**: "Post-Black Metal" is
+  expressible today as two Types, `metal.post` (which carries `join_next: hyphen`) followed by
+  `metal.black`. No `post` Trait is needed — the Trait of that name remains deprecated, since a
+  bare `post` Trait would collide with the `metal.post` Type on the render "Post-Metal".
+
 ## [0.7.0] — 2026-07-28
 
 ### Added

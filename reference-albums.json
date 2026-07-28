@@ -2,7 +2,7 @@
   "schema": "open-music-taxonomy/reference-albums/0.1",
   "taxonomy": {
     "id": "open-music-taxonomy",
-    "version": "0.7.0"
+    "version": "0.8.0"
   },
   "purpose": "Pilot corpus derived from locally owned releases. Album identities and sonic observations are public; audio files remain local and excluded from version control.",
   "albums": [
@@ -21,11 +21,20 @@
         "scope": "album",
         "genre": "metal",
         "traits": [
-          {"id": "technical", "priority": 1},
-          {"id": "progressive", "priority": 2}
+          {
+            "id": "technical",
+            "priority": 1
+          },
+          {
+            "id": "progressive",
+            "priority": 2
+          }
         ],
         "types": [
-          {"id": "metal.death", "priority": 1}
+          {
+            "id": "metal.death",
+            "priority": 1
+          }
         ]
       },
       "sonic_rationale": "Highly precise instrumental execution, dense changing structures, and extended compositional development are defining features over a Death Metal foundation.",
@@ -51,10 +60,16 @@
         "scope": "album",
         "genre": "metal",
         "traits": [
-          {"id": "melodic", "priority": 1}
+          {
+            "id": "melodic",
+            "priority": 1
+          }
         ],
         "types": [
-          {"id": "metal.death", "priority": 1}
+          {
+            "id": "metal.death",
+            "priority": 1
+          }
         ]
       },
       "sonic_rationale": "Harmonized guitar leads and recurring melodic development organize the songs while the riffing, vocals, and rhythmic language remain rooted in Death Metal.",
@@ -80,10 +95,16 @@
         "scope": "album",
         "genre": "metal",
         "traits": [
-          {"id": "funeral", "priority": 1}
+          {
+            "id": "funeral",
+            "priority": 1
+          }
         ],
         "types": [
-          {"id": "metal.doom", "priority": 1}
+          {
+            "id": "metal.doom",
+            "priority": 1
+          }
         ]
       },
       "sonic_rationale": "Extremely slow dirge pacing, sustained low-register weight, and expansive mournful passages satisfy the Funeral trait's Doom-specific constraints.",
@@ -109,10 +130,16 @@
         "scope": "album",
         "genre": "metal",
         "traits": [
-          {"id": "symphonic", "priority": 1}
+          {
+            "id": "symphonic",
+            "priority": 1
+          }
         ],
         "types": [
-          {"id": "metal.black", "priority": 1}
+          {
+            "id": "metal.black",
+            "priority": 1
+          }
         ]
       },
       "sonic_rationale": "Black Metal tremolo, vocal, and rhythmic vocabulary is structurally combined with orchestral keyboard layers and symphonic arrangement.",
@@ -138,11 +165,20 @@
         "scope": "album",
         "genre": "metal",
         "traits": [
-          {"id": "progressive", "priority": 1}
+          {
+            "id": "progressive",
+            "priority": 1
+          }
         ],
         "types": [
-          {"id": "metal.death", "priority": 1},
-          {"id": "metal.groove", "priority": 2}
+          {
+            "id": "metal.death",
+            "priority": 1
+          },
+          {
+            "id": "metal.groove",
+            "priority": 2
+          }
         ]
       },
       "sonic_rationale": "Long-form development and structural variation shape an album whose extreme-vocal and riff language combines Death Metal attack with repeated syncopated Groove Metal cycles.",
@@ -172,7 +208,10 @@
         "scope": "album",
         "genre": "rock",
         "traits": [
-          {"id": "progressive", "priority": 1}
+          {
+            "id": "progressive",
+            "priority": 1
+          }
         ],
         "types": []
       },
@@ -181,6 +220,35 @@
         {
           "display": "Rock",
           "reason": "Technically valid but omits the release's defining compositional structure."
+        }
+      ]
+    },
+    {
+      "id": "vildhjarta-masstaden-forte",
+      "artist": "vildhjarta",
+      "album": "måsstaden (forte)",
+      "review_status": "accepted",
+      "display": "Thall",
+      "classification": {
+        "schema": "open-music-taxonomy/classification/0.1",
+        "taxonomy": {
+          "id": "open-music-taxonomy",
+          "version": "0.1.0"
+        },
+        "scope": "album",
+        "genre": "thall",
+        "traits": [],
+        "types": []
+      },
+      "sonic_rationale": "Palm-muted low-register pulses, syncopated metric displacement, and layered polyrhythmic groove are the album's primary vocabulary rather than Metalcore breakdown form or Deathcore extreme-vocal arrangements.",
+      "disputed_alternatives": [
+        {
+          "display": "Technical Thall",
+          "reason": "The execution is unusually precise, but the displaced groove itself is the identity; Technical would treat complexity as the defining qualifier."
+        },
+        {
+          "display": "Metalcore",
+          "reason": "Where the artist was previously filed; it loses the palm-muted polyrhythmic identity that this genre exists to name."
         }
       ]
     }
