@@ -2,7 +2,7 @@
   "schema": "open-music-taxonomy/conformance/0.1",
   "taxonomy": {
     "id": "open-music-taxonomy",
-    "version": "0.8.0"
+    "version": "0.9.0"
   },
   "cases": [
     {
@@ -1490,6 +1490,112 @@
             "priority": 1
           }
         ],
+        "types": []
+      }
+    },
+    {
+      "id": "C088",
+      "name": "Djent",
+      "expected": "valid",
+      "display": "Djent",
+      "classification": {
+        "genre": "djent",
+        "traits": [],
+        "types": []
+      }
+    },
+    {
+      "id": "C089",
+      "name": "Technical Djent",
+      "expected": "valid",
+      "display": "Technical Djent",
+      "classification": {
+        "genre": "djent",
+        "traits": [
+          {
+            "id": "technical",
+            "priority": 1
+          }
+        ],
+        "types": []
+      }
+    },
+    {
+      "id": "C090",
+      "name": "Melodic Djent",
+      "expected": "valid",
+      "display": "Melodic Djent",
+      "classification": {
+        "genre": "djent",
+        "traits": [
+          {
+            "id": "melodic",
+            "priority": 1
+          }
+        ],
+        "types": []
+      }
+    },
+    {
+      "id": "C091",
+      "name": "Progressive Metal",
+      "expected": "valid",
+      "display": "Progressive Metal",
+      "classification": {
+        "genre": "metal",
+        "traits": [
+          {
+            "id": "progressive",
+            "priority": 1
+          }
+        ],
+        "types": []
+      }
+    },
+    {
+      "id": "C092",
+      "name": "Technical Progressive Metal",
+      "expected": "valid",
+      "display": "Technical Progressive Metal",
+      "classification": {
+        "genre": "metal",
+        "traits": [
+          {
+            "id": "technical",
+            "priority": 1
+          },
+          {
+            "id": "progressive",
+            "priority": 2
+          }
+        ],
+        "types": []
+      }
+    },
+    {
+      "id": "C093",
+      "name": "Progressive Metalcore",
+      "expected": "valid",
+      "display": "Progressive Metalcore",
+      "classification": {
+        "genre": "metalcore",
+        "traits": [
+          {
+            "id": "progressive",
+            "priority": 1
+          }
+        ],
+        "types": []
+      }
+    },
+    {
+      "id": "C094",
+      "name": "Instrumental is not a genre",
+      "expected": "invalid",
+      "expected_error": "unknown genre instrumental",
+      "classification": {
+        "genre": "instrumental",
+        "traits": [],
         "types": []
       }
     }

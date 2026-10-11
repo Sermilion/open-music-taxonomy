@@ -1,6 +1,6 @@
 # Open Music Taxonomy Classification Specification
 
-Version: `0.7.0`
+Version: `0.9.0`
 
 Status: Released
 
@@ -311,6 +311,32 @@ Additive only: the **Screamo** and **Emocore** Genres are added (peer standalone
 `emoviolence`, `hardcore`, and `punk`). No existing classification is affected. Both are modeled
 by their sonic characteristics (vocal delivery, dynamics, instrumentation) per §3.
 
+### v0.8.0
+
+Additive only: the **Thall** Genre, the **Depressive** Trait (Metal, requiring the Black Type),
+and the **Breakcore** Type (`electronic.breakcore`) are added. No existing classification is
+affected.
+
+### v0.9.0
+
+Additive in the validation sense: previously valid classifications stay valid. The release splits
+progressive and djent music that library practice had been filing under Metalcore.
+
+- **Djent** (`djent`) is a new Genre. On a library that follows this taxonomy it lives at
+  `Core/Djent`, beside Metalcore, Deathcore, and Thall. It is modern, down-tuned, syncopated
+  progressive metalcore, including instrumental music in that vocabulary.
+- **Progressive Metal** already exists. It is the `progressive` Trait on Metal with no Type
+  (`genre: metal`, `traits: [progressive]`), canonical render `Progressive Metal`, library folder
+  `Metal/Progressive Metal`. v0.9.0 refines that Trait's definition so this classification covers
+  classic and modern prog metal, including instrumental prog, and states its boundaries with
+  Djent, Thall, and Metalcore. The same Trait still qualifies other foundations
+  (`Progressive Death Metal`, `Progressive Rock`, `Progressive Metalcore`). No second Progressive
+  Metal atom is added.
+- **Instrumental** is not a Genre or a Trait. Absence of vocals does not determine classification.
+  Instrumental djent stays Djent. Instrumental prog metal is Progressive Metal.
+- Thall stays the Genre `thall`. Boundaries among Thall, Djent, Progressive Metal, and Metalcore
+  are sonic and are stated on those atoms.
+
 ## 14. Application profiles
 
 The base standard requires only Genre and permits Unknown. Applications MAY declare a named,
@@ -369,7 +395,7 @@ accepted under the license that already applies to the files being changed.
   "schema": "open-music-taxonomy/classification/0.1",
   "taxonomy": {
     "id": "open-music-taxonomy",
-    "version": "0.7.0"
+    "version": "0.9.0"
   },
   "scope": "album",
   "genre": "metal",

@@ -36,7 +36,7 @@ DEFAULT_ROOT = "/mnt/nas-music"
 DEFAULT_SCOPES = ["Metal", "Core", "Alternative", "Rock", "Jazz", "Traditional Pop",
                   "Electronic", "R&B", "Rap", "Russian", "Asian"]
 SCOPE_GENRES = {
-    "metal", "metalcore", "deathcore", "thall", "rock",
+    "metal", "metalcore", "deathcore", "thall", "djent", "rock",
     "hardcore", "punk", "grunge", "numetal", "emoviolence",
     "jazz", "traditionalpop", "electronic", "rnb", "hiphop",
     "screamo", "emocore",
@@ -81,7 +81,7 @@ def build_render_index(validator: Validator) -> dict[str, dict[str, Any]]:
                   if tr.get("status") == "approved"
                   and (not tr.get("applicable_genres")
                        or genre_id in tr["applicable_genres"])]
-        # Bare genre (no type): metalcore/deathcore/thall/rock/metal have no sub-types
+        # Bare genre (no type): metalcore/deathcore/thall/djent/rock/metal have no sub-types
         # and are valid classifications on their own.
         bare = {"genre": genre_id, "traits": [], "types": []}
         index[validator.render(bare).lower()] = prefer(
