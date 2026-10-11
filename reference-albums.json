@@ -394,15 +394,15 @@
         },
         "scope": "album",
         "genre": "metal",
-        "traits": [],
-        "types": [
+        "traits": [
           {
-            "id": "metal.progressive",
+            "id": "progressive",
             "priority": 1
           }
-        ]
+        ],
+        "types": []
       },
-      "sonic_rationale": "Long-form sectional development, virtuosic instrumental interplay, odd meters, and recurring thematic writing in the classic progressive-metal vocabulary. The progressive focus is intrinsic to the Type, so the progressive Trait is not stacked on it.",
+      "sonic_rationale": "Long-form sectional development, virtuosic instrumental interplay, odd meters, and recurring thematic writing in the classic progressive-metal vocabulary. This is the existing Progressive Metal classification: the progressive Trait on Metal, with no more specific Type.",
       "disputed_alternatives": [
         {
           "display": "Progressive Rock",
@@ -428,19 +428,19 @@
         },
         "scope": "album",
         "genre": "metal",
-        "traits": [],
-        "types": [
+        "traits": [
           {
-            "id": "metal.progressive",
+            "id": "progressive",
             "priority": 1
           }
-        ]
+        ],
+        "types": []
       },
       "sonic_rationale": "Album-scale sectional development across contrasting metal vocabularies, with progressive-metal long form as the identity. Individual breakdown passages do not make the album Metalcore.",
       "disputed_alternatives": [
         {
           "display": "Progressive Metalcore",
-          "reason": "The band's earlier vocabulary and some breakdowns support it. On this album the long-form progressive-metal structure leads, so the album is the Progressive Metal type rather than Metalcore plus the progressive Trait."
+          "reason": "The band's earlier vocabulary and some breakdowns support it. On this album the long-form progressive-metal structure leads, so it is Progressive Metal, the progressive Trait on Metal, rather than that Trait on Metalcore."
         },
         {
           "display": "Djent",
@@ -462,15 +462,15 @@
         },
         "scope": "album",
         "genre": "metal",
-        "traits": [],
-        "types": [
+        "traits": [
           {
-            "id": "metal.progressive",
+            "id": "progressive",
             "priority": 1
           }
-        ]
+        ],
+        "types": []
       },
-      "sonic_rationale": "Instrumental melodic development, sectional form, and fusion-leaning prog-metal interplay. Instrumental is not a Genre; the style is Progressive Metal. The same rule places Intervals here.",
+      "sonic_rationale": "Instrumental melodic development, sectional form, and fusion-leaning prog-metal interplay. Instrumental is not a Genre; the style is Progressive Metal, the existing progressive Trait on Metal. The same rule places Intervals here.",
       "disputed_alternatives": [
         {
           "display": "Djent",

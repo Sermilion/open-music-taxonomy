@@ -325,20 +325,17 @@ progressive and djent music that library practice had been filing under Metalcor
 - **Djent** (`djent`) is a new Genre. On a library that follows this taxonomy it lives at
   `Core/Djent`, beside Metalcore, Deathcore, and Thall. It is modern, down-tuned, syncopated
   progressive metalcore, including instrumental music in that vocabulary.
-- **Progressive Metal** is the Metal Type `metal.progressive` (label `Progressive`), so the
-  canonical render is `Progressive Metal` and the library folder is `Metal/Progressive Metal`.
-  It was not already a Genre or a Type. The existing `progressive` Trait remains the qualifier
-  for other styles (`Progressive Death Metal`, `Progressive Rock`, `Progressive Metalcore`) and
-  is not how this Type is named. Do not stack that Trait on `metal.progressive`; the grammar
-  still accepts the redundant combination, but curatorial practice does not.
+- **Progressive Metal** already exists. It is the `progressive` Trait on Metal with no Type
+  (`genre: metal`, `traits: [progressive]`), canonical render `Progressive Metal`, library folder
+  `Metal/Progressive Metal`. v0.9.0 refines that Trait's definition so this classification covers
+  classic and modern prog metal, including instrumental prog, and states its boundaries with
+  Djent, Thall, and Metalcore. The same Trait still qualifies other foundations
+  (`Progressive Death Metal`, `Progressive Rock`, `Progressive Metalcore`). No second Progressive
+  Metal atom is added.
 - **Instrumental** is not a Genre or a Trait. Absence of vocals does not determine classification.
   Instrumental djent stays Djent. Instrumental prog metal is Progressive Metal.
 - Thall stays the Genre `thall`. Boundaries among Thall, Djent, Progressive Metal, and Metalcore
   are sonic and are stated on those atoms.
-
-The bare render `Progressive Metal` is shared by the Type `metal.progressive` and by the
-`progressive` Trait on Metal with no Type. Those classifications are not exactly equal. Library
-folder resolution prefers the Type. Display text is not an identity; do not parse it.
 
 ## 14. Application profiles
 

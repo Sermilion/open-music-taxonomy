@@ -195,17 +195,6 @@
       "sonic_definition": "Metal emphasizing syncopated mid-tempo riff cycles, strong downbeat weight, and groove-centered rhythmic repetition."
     },
     {
-      "id": "metal.progressive",
-      "label": "Progressive",
-      "genre": "metal",
-      "status": "approved",
-      "aliases": [
-        "prog metal",
-        "prog-metal"
-      ],
-      "sonic_definition": "Metal built on extended sectional development, virtuosic instrumental interplay, and the odd-meter and long-form vocabularies of classic and modern progressive metal, including instrumental prog metal. Identity comes from suite-like structure and melodic or harmonic development, not from hardcore breakdowns, djent chug cycles, or thall's palm-muted groove pulses. Instrumental lineup is not a separate Genre. When another Metal type supplies the foundation and progressive form only qualifies it, use that Type with the progressive Trait instead of this Type. The progressive focus is intrinsic, so the progressive Trait is not applied on top of this Type."
-    },
-    {
       "id": "rock.hard",
       "label": "Hard",
       "genre": "rock",
@@ -406,7 +395,10 @@
       "id": "progressive",
       "label": "Progressive",
       "status": "approved",
-      "sonic_definition": "Extended development, structural variation, metric complexity, or nonstandard form is a defining compositional focus of a style that is not already the Progressive Metal type. It qualifies other styles, such as Progressive Death Metal, Progressive Rock, or Progressive Metalcore. Progressive Metal names that focus itself and does not also take this Trait. Instrumental performance does not satisfy this Trait and is not a Genre."
+      "aliases": [
+        "prog"
+      ],
+      "sonic_definition": "Extended development, structural variation, metric complexity, or nonstandard form is a defining compositional focus. On Metal with no Type, this Trait is Progressive Metal: classic and modern prog metal, including instrumental prog, built on extended sectional development, virtuosic instrumental interplay, odd meters, and long-form melody. That classification is the Metal/Progressive Metal folder. When another Type or Genre is the foundation, the same Trait qualifies that style instead, as in Progressive Death Metal, Progressive Rock, or Progressive Metalcore. Djent is the down-tuned syncopated extended-range riff vocabulary, and Thall is the displaced palm-muted groove; neither is this Trait. Instrumental performance does not by itself satisfy this Trait and is not a Genre."
     },
     {
       "id": "stoner",

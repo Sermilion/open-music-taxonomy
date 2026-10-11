@@ -6,7 +6,7 @@ A strict, compositional standard for classifying music by audible characteristic
 - [`taxonomy.json`](taxonomy.json) — curated Genre, Type, and Trait registry
 - [`taxonomy.schema.json`](taxonomy.schema.json) — taxonomy package JSON Schema
 - [`classification.schema.json`](classification.schema.json) — classification JSON Schema
-- [`conformance.json`](conformance.json) — 96 valid and invalid conformance cases
+- [`conformance.json`](conformance.json) — 94 valid and invalid conformance cases
 - [`reference-albums.json`](reference-albums.json) — reference classifications grounded in real releases
 - [`validate.py`](validate.py) — dependency-free semantic validator and canonical renderer checks
 - [`CHANGELOG.md`](CHANGELOG.md) — release history
@@ -21,7 +21,7 @@ python validate.py
 Expected result:
 
 ```text
-PASS: 96 cases (79 valid, 17 invalid), 3 equivalence assertions, 14 reference albums
+PASS: 94 cases (79 valid, 15 invalid), 3 equivalence assertions, 14 reference albums
 ```
 
 ## Scope of v0.1.0

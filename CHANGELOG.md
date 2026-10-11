@@ -13,27 +13,28 @@ as described in `spec.md` §13.
 - **Djent** Genre (`djent`, aliases `djent metal`) — peer standalone genre to `metalcore`,
   `deathcore`, and `thall`, for the Core library folder `Core/Djent`. Modern, down-tuned,
   syncopated progressive metalcore, including instrumental acts in that vocabulary.
-- **Progressive Metal** Type (`metal.progressive`, label `Progressive`, aliases `prog metal` and
-  `prog-metal`) under Metal. Canonical render `Progressive Metal`; library folder
-  `Metal/Progressive Metal`. Classic and modern prog metal, including instrumental prog.
-- Nine conformance cases (C088–C096).
+- Seven conformance cases (C088–C094).
 - Reference albums pinning the split: Periphery *Periphery II*, Meshuggah *obZen*, TesseracT
   *Altered State*, Animals as Leaders *Animals as Leaders*, Dream Theater *Metropolis Pt. 2:
   Scenes from a Memory*, Between the Buried and Me *Colors*, and Plini *Handmade Cities*.
 
 ### Changed
 
-- **Metalcore**, **Thall**, and the **progressive** Trait definitions now state the boundaries
-  with Djent and Progressive Metal. No identifier, parent, or validation rule changed, so
-  previously valid classifications stay valid.
+- **Progressive Metal** already exists as the `progressive` Trait on Metal with no Type
+  (render `Progressive Metal`, library folder `Metal/Progressive Metal`). Its definition now
+  covers classic and modern prog metal, including instrumental prog, and states the boundaries
+  with Djent, Thall, and Metalcore. Alias `prog` is recorded on the Trait. The Trait still
+  qualifies other foundations (`Progressive Death Metal`, `Progressive Rock`,
+  `Progressive Metalcore`). No second atom was added.
+- **Metalcore** and **Thall** definitions now state the same boundaries. No identifier or
+  validation rule changed, so previously valid classifications stay valid.
 
 ### Notes
 
 - There is no `parent` field on a Genre. Core and Metal are library family folders, not taxonomy
-  atoms. Djent is a Genre, as Metalcore and Thall are. Progressive Metal is a Type owned by
-  `metal` (`genre` on the Type), as Death Metal and Groove Metal are. `Instrumental` is not a
-  Genre and was not added; C094 rejects it. C095 rejects a fake `progressivemetal` Genre id.
-  C096 rejects putting `metal.progressive` on Djent.
+  atoms. Djent is a Genre, as Metalcore and Thall are. Progressive Metal is not a new Genre or
+  Type; C091 pins the existing classification. `Instrumental` is not a Genre and was not added;
+  C094 rejects it.
 - Boundary rules, applied to the whole release rather than to one track in isolation:
   - **Metalcore** — hardcore breakdowns and conventional section changes lead. Progressive form
     without djent or thall vocabulary stays Metalcore plus the `progressive` Trait
@@ -44,15 +45,12 @@ as described in `spec.md` §13.
     Monuments. Meshuggah is the originator and is a Djent reference, not Thall.
   - **Thall** — the displaced palm-muted groove pulse is the identity (vildhjarta and that
     vocabulary). Shared low tuning is not enough.
-  - **Progressive Metal** — suite-form development, virtuosic interplay, and classic or modern
-    prog-metal melody lead. Reference points: Dream Theater, Haken, Symphony X, Between the
-    Buried and Me, Persefone, Plini, Intervals. If another Metal type is the foundation, keep
-    that type and add the `progressive` Trait (`Progressive Death Metal`) instead of this Type.
+  - **Progressive Metal** — the `progressive` Trait on Metal. Suite-form development, virtuosic
+    interplay, and classic or modern prog-metal melody lead. Reference points: Dream Theater,
+    Haken, Symphony X, Between the Buried and Me, Persefone, Plini, Intervals. If another Metal
+    type is the foundation, keep that type and keep the Trait (`Progressive Death Metal`).
   - **Instrumental** — not a classification. Animals as Leaders is Djent. Plini and Intervals
     are Progressive Metal.
-- The `progressive` Trait on bare Metal renders the same text as `metal.progressive`
-  (`Progressive Metal`). They are not the same classification. Folder lookup prefers the Type.
-  Do not stack the Trait on the Type; that curatorial rule is not a new validator constraint.
 - Re-filing albums that were stored under `Core/Metalcore` is a library migration. This version
   does not invalidate a published Metalcore classification.
 

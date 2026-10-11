@@ -194,8 +194,8 @@ def run() -> int:
         failures.append("corpus taxonomy version does not match taxonomy package")
 
     cases = corpus["cases"]
-    if len(cases) != 96:
-        failures.append(f"expected 96 conformance cases, found {len(cases)}")
+    if len(cases) != 94:
+        failures.append(f"expected 94 conformance cases, found {len(cases)}")
 
     case_by_id: dict[str, dict[str, Any]] = {}
     for case in cases:

@@ -1543,13 +1543,13 @@
       "display": "Progressive Metal",
       "classification": {
         "genre": "metal",
-        "traits": [],
-        "types": [
+        "traits": [
           {
-            "id": "metal.progressive",
+            "id": "progressive",
             "priority": 1
           }
-        ]
+        ],
+        "types": []
       }
     },
     {
@@ -1563,14 +1563,13 @@
           {
             "id": "technical",
             "priority": 1
+          },
+          {
+            "id": "progressive",
+            "priority": 2
           }
         ],
-        "types": [
-          {
-            "id": "metal.progressive",
-            "priority": 1
-          }
-        ]
+        "types": []
       }
     },
     {
@@ -1598,33 +1597,6 @@
         "genre": "instrumental",
         "traits": [],
         "types": []
-      }
-    },
-    {
-      "id": "C095",
-      "name": "Progressive Metal is a Metal type, not a genre",
-      "expected": "invalid",
-      "expected_error": "unknown genre progressivemetal",
-      "classification": {
-        "genre": "progressivemetal",
-        "traits": [],
-        "types": []
-      }
-    },
-    {
-      "id": "C096",
-      "name": "Progressive type is not owned by Djent",
-      "expected": "invalid",
-      "expected_error": "type metal.progressive belongs to metal, not djent",
-      "classification": {
-        "genre": "djent",
-        "traits": [],
-        "types": [
-          {
-            "id": "metal.progressive",
-            "priority": 1
-          }
-        ]
       }
     }
   ],
