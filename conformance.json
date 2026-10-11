@@ -2,7 +2,7 @@
   "schema": "open-music-taxonomy/conformance/0.1",
   "taxonomy": {
     "id": "open-music-taxonomy",
-    "version": "0.8.0"
+    "version": "0.9.0"
   },
   "cases": [
     {
@@ -1491,6 +1491,140 @@
           }
         ],
         "types": []
+      }
+    },
+    {
+      "id": "C088",
+      "name": "Djent",
+      "expected": "valid",
+      "display": "Djent",
+      "classification": {
+        "genre": "djent",
+        "traits": [],
+        "types": []
+      }
+    },
+    {
+      "id": "C089",
+      "name": "Technical Djent",
+      "expected": "valid",
+      "display": "Technical Djent",
+      "classification": {
+        "genre": "djent",
+        "traits": [
+          {
+            "id": "technical",
+            "priority": 1
+          }
+        ],
+        "types": []
+      }
+    },
+    {
+      "id": "C090",
+      "name": "Melodic Djent",
+      "expected": "valid",
+      "display": "Melodic Djent",
+      "classification": {
+        "genre": "djent",
+        "traits": [
+          {
+            "id": "melodic",
+            "priority": 1
+          }
+        ],
+        "types": []
+      }
+    },
+    {
+      "id": "C091",
+      "name": "Progressive Metal",
+      "expected": "valid",
+      "display": "Progressive Metal",
+      "classification": {
+        "genre": "metal",
+        "traits": [],
+        "types": [
+          {
+            "id": "metal.progressive",
+            "priority": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "C092",
+      "name": "Technical Progressive Metal",
+      "expected": "valid",
+      "display": "Technical Progressive Metal",
+      "classification": {
+        "genre": "metal",
+        "traits": [
+          {
+            "id": "technical",
+            "priority": 1
+          }
+        ],
+        "types": [
+          {
+            "id": "metal.progressive",
+            "priority": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "C093",
+      "name": "Progressive Metalcore",
+      "expected": "valid",
+      "display": "Progressive Metalcore",
+      "classification": {
+        "genre": "metalcore",
+        "traits": [
+          {
+            "id": "progressive",
+            "priority": 1
+          }
+        ],
+        "types": []
+      }
+    },
+    {
+      "id": "C094",
+      "name": "Instrumental is not a genre",
+      "expected": "invalid",
+      "expected_error": "unknown genre instrumental",
+      "classification": {
+        "genre": "instrumental",
+        "traits": [],
+        "types": []
+      }
+    },
+    {
+      "id": "C095",
+      "name": "Progressive Metal is a Metal type, not a genre",
+      "expected": "invalid",
+      "expected_error": "unknown genre progressivemetal",
+      "classification": {
+        "genre": "progressivemetal",
+        "traits": [],
+        "types": []
+      }
+    },
+    {
+      "id": "C096",
+      "name": "Progressive type is not owned by Djent",
+      "expected": "invalid",
+      "expected_error": "type metal.progressive belongs to metal, not djent",
+      "classification": {
+        "genre": "djent",
+        "traits": [],
+        "types": [
+          {
+            "id": "metal.progressive",
+            "priority": 1
+          }
+        ]
       }
     }
   ],

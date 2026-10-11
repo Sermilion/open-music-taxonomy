@@ -2,7 +2,7 @@
   "schema": "open-music-taxonomy/reference-albums/0.1",
   "taxonomy": {
     "id": "open-music-taxonomy",
-    "version": "0.8.0"
+    "version": "0.9.0"
   },
   "purpose": "Pilot corpus derived from locally owned releases. Album identities and sonic observations are public; audio files remain local and excluded from version control.",
   "albums": [
@@ -249,6 +249,236 @@
         {
           "display": "Metalcore",
           "reason": "Where the artist was previously filed; it loses the palm-muted polyrhythmic identity that this genre exists to name."
+        },
+        {
+          "display": "Djent",
+          "reason": "Low tuning and syncopation are shared, but the identity is the displaced palm-muted groove, which is Thall rather than Djent's structured progressive-metalcore riff songs."
+        }
+      ]
+    },
+    {
+      "id": "periphery-periphery-ii",
+      "artist": "Periphery",
+      "album": "Periphery II: This Time It's Personal",
+      "review_status": "accepted",
+      "display": "Djent",
+      "classification": {
+        "schema": "open-music-taxonomy/classification/0.1",
+        "taxonomy": {
+          "id": "open-music-taxonomy",
+          "version": "0.9.0"
+        },
+        "scope": "album",
+        "genre": "djent",
+        "traits": [],
+        "types": []
+      },
+      "sonic_rationale": "Down-tuned extended-range syncopated riffs, polymetric accents, ambient clean passages, and harsh/clean vocal contrast in polished modern song forms. The djent riff is the identity, which is why this leaves the Metalcore folder.",
+      "disputed_alternatives": [
+        {
+          "display": "Metalcore",
+          "reason": "Breakdowns and harsh/clean vocals occur, but the primary rhythmic vocabulary is the syncopated extended-range riff, not the hardcore breakdown."
+        },
+        {
+          "display": "Progressive Metal",
+          "reason": "Songs are structurally ambitious, but suite-form prog-metal melody does not lead; the djent chug does."
+        },
+        {
+          "display": "Thall",
+          "reason": "Syncopation and low tuning are shared. The album is organized as progressive-metalcore songs, not as thall's displaced palm-muted groove."
+        }
+      ]
+    },
+    {
+      "id": "meshuggah-obzen",
+      "artist": "Meshuggah",
+      "album": "obZen",
+      "review_status": "accepted",
+      "display": "Djent",
+      "classification": {
+        "schema": "open-music-taxonomy/classification/0.1",
+        "taxonomy": {
+          "id": "open-music-taxonomy",
+          "version": "0.9.0"
+        },
+        "scope": "album",
+        "genre": "djent",
+        "traits": [],
+        "types": []
+      },
+      "sonic_rationale": "Percussive polymetric low-register guitar cycles are the album's identity and the source vocabulary later named djent. Meshuggah is the originator, so the album is a Djent reference rather than a later scene imitation.",
+      "disputed_alternatives": [
+        {
+          "display": "Thall",
+          "reason": "Thall specializes the later palm-muted ambient groove. obZen is the source polymetric chug, not that specialization."
+        },
+        {
+          "display": "Progressive Metal",
+          "reason": "Odd meters are structural, but the identity is the percussive polymetric riff, not suite-form melodic prog metal."
+        },
+        {
+          "display": "Groove Metal",
+          "reason": "The syncopation is polymetric and percussive rather than mid-tempo groove-metal downbeat cycles."
+        }
+      ]
+    },
+    {
+      "id": "tesseract-altered-state",
+      "artist": "TesseracT",
+      "album": "Altered State",
+      "review_status": "accepted",
+      "display": "Djent",
+      "classification": {
+        "schema": "open-music-taxonomy/classification/0.1",
+        "taxonomy": {
+          "id": "open-music-taxonomy",
+          "version": "0.9.0"
+        },
+        "scope": "album",
+        "genre": "djent",
+        "traits": [],
+        "types": []
+      },
+      "sonic_rationale": "Clean-vocal, atmospheric songs whose rhythmic spine is still the down-tuned polymetric djent riff. Ambience and melodic singing do not move it to Progressive Metal.",
+      "disputed_alternatives": [
+        {
+          "display": "Progressive Metal",
+          "reason": "Long phrases and clean melodies are prominent, but the defining guitar rhythm is the djent cycle, not classic prog-metal suite writing."
+        },
+        {
+          "display": "Atmospheric Djent",
+          "reason": "Atmosphere is strong enough that the atmospheric Trait is plausible. The album reference keeps the bare Genre because the djent riff, not the ambience, decides the folder."
+        }
+      ]
+    },
+    {
+      "id": "animals-as-leaders-animals-as-leaders",
+      "artist": "Animals as Leaders",
+      "album": "Animals as Leaders",
+      "review_status": "accepted",
+      "display": "Djent",
+      "classification": {
+        "schema": "open-music-taxonomy/classification/0.1",
+        "taxonomy": {
+          "id": "open-music-taxonomy",
+          "version": "0.9.0"
+        },
+        "scope": "album",
+        "genre": "djent",
+        "traits": [],
+        "types": []
+      },
+      "sonic_rationale": "Instrumental extended-range syncopated riffing. Absence of vocals is not a Genre; the audible style is Djent.",
+      "disputed_alternatives": [
+        {
+          "display": "Progressive Metal",
+          "reason": "Virtuosic instrumental development is constant, but the rhythmic identity is the djent vocabulary rather than melodic prog-metal form."
+        },
+        {
+          "display": "Instrumental",
+          "reason": "Rejected. Instrumental is not a Genre or Trait. Classify the style that is actually played."
+        }
+      ]
+    },
+    {
+      "id": "dream-theater-scenes-from-a-memory",
+      "artist": "Dream Theater",
+      "album": "Metropolis Pt. 2: Scenes from a Memory",
+      "review_status": "accepted",
+      "display": "Progressive Metal",
+      "classification": {
+        "schema": "open-music-taxonomy/classification/0.1",
+        "taxonomy": {
+          "id": "open-music-taxonomy",
+          "version": "0.9.0"
+        },
+        "scope": "album",
+        "genre": "metal",
+        "traits": [],
+        "types": [
+          {
+            "id": "metal.progressive",
+            "priority": 1
+          }
+        ]
+      },
+      "sonic_rationale": "Long-form sectional development, virtuosic instrumental interplay, odd meters, and recurring thematic writing in the classic progressive-metal vocabulary. The progressive focus is intrinsic to the Type, so the progressive Trait is not stacked on it.",
+      "disputed_alternatives": [
+        {
+          "display": "Progressive Rock",
+          "reason": "Rock songcraft is audible, but distorted metal riff weight and metal arrangement lead."
+        },
+        {
+          "display": "Djent",
+          "reason": "Metric complexity is not the down-tuned syncopated djent riff vocabulary."
+        }
+      ]
+    },
+    {
+      "id": "between-the-buried-and-me-colors",
+      "artist": "Between the Buried and Me",
+      "album": "Colors",
+      "review_status": "accepted",
+      "display": "Progressive Metal",
+      "classification": {
+        "schema": "open-music-taxonomy/classification/0.1",
+        "taxonomy": {
+          "id": "open-music-taxonomy",
+          "version": "0.9.0"
+        },
+        "scope": "album",
+        "genre": "metal",
+        "traits": [],
+        "types": [
+          {
+            "id": "metal.progressive",
+            "priority": 1
+          }
+        ]
+      },
+      "sonic_rationale": "Album-scale sectional development across contrasting metal vocabularies, with progressive-metal long form as the identity. Individual breakdown passages do not make the album Metalcore.",
+      "disputed_alternatives": [
+        {
+          "display": "Progressive Metalcore",
+          "reason": "The band's earlier vocabulary and some breakdowns support it. On this album the long-form progressive-metal structure leads, so the album is the Progressive Metal type rather than Metalcore plus the progressive Trait."
+        },
+        {
+          "display": "Djent",
+          "reason": "Extended-range syncopation is not the defining riff language."
+        }
+      ]
+    },
+    {
+      "id": "plini-handmade-cities",
+      "artist": "Plini",
+      "album": "Handmade Cities",
+      "review_status": "accepted",
+      "display": "Progressive Metal",
+      "classification": {
+        "schema": "open-music-taxonomy/classification/0.1",
+        "taxonomy": {
+          "id": "open-music-taxonomy",
+          "version": "0.9.0"
+        },
+        "scope": "album",
+        "genre": "metal",
+        "traits": [],
+        "types": [
+          {
+            "id": "metal.progressive",
+            "priority": 1
+          }
+        ]
+      },
+      "sonic_rationale": "Instrumental melodic development, sectional form, and fusion-leaning prog-metal interplay. Instrumental is not a Genre; the style is Progressive Metal. The same rule places Intervals here.",
+      "disputed_alternatives": [
+        {
+          "display": "Djent",
+          "reason": "Extended-range tone appears, but the djent chug cycle is not the identity. Melodic instrumental prog-metal development leads."
+        },
+        {
+          "display": "Instrumental",
+          "reason": "Rejected. Instrumental is not a Genre or Trait. Classify the style that is actually played."
         }
       ]
     }

@@ -6,6 +6,56 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 as described in `spec.md` §13.
 
+## [0.9.0] — 2026-10-11
+
+### Added
+
+- **Djent** Genre (`djent`, aliases `djent metal`) — peer standalone genre to `metalcore`,
+  `deathcore`, and `thall`, for the Core library folder `Core/Djent`. Modern, down-tuned,
+  syncopated progressive metalcore, including instrumental acts in that vocabulary.
+- **Progressive Metal** Type (`metal.progressive`, label `Progressive`, aliases `prog metal` and
+  `prog-metal`) under Metal. Canonical render `Progressive Metal`; library folder
+  `Metal/Progressive Metal`. Classic and modern prog metal, including instrumental prog.
+- Nine conformance cases (C088–C096).
+- Reference albums pinning the split: Periphery *Periphery II*, Meshuggah *obZen*, TesseracT
+  *Altered State*, Animals as Leaders *Animals as Leaders*, Dream Theater *Metropolis Pt. 2:
+  Scenes from a Memory*, Between the Buried and Me *Colors*, and Plini *Handmade Cities*.
+
+### Changed
+
+- **Metalcore**, **Thall**, and the **progressive** Trait definitions now state the boundaries
+  with Djent and Progressive Metal. No identifier, parent, or validation rule changed, so
+  previously valid classifications stay valid.
+
+### Notes
+
+- There is no `parent` field on a Genre. Core and Metal are library family folders, not taxonomy
+  atoms. Djent is a Genre, as Metalcore and Thall are. Progressive Metal is a Type owned by
+  `metal` (`genre` on the Type), as Death Metal and Groove Metal are. `Instrumental` is not a
+  Genre and was not added; C094 rejects it. C095 rejects a fake `progressivemetal` Genre id.
+  C096 rejects putting `metal.progressive` on Djent.
+- Boundary rules, applied to the whole release rather than to one track in isolation:
+  - **Metalcore** — hardcore breakdowns and conventional section changes lead. Progressive form
+    without djent or thall vocabulary stays Metalcore plus the `progressive` Trait
+    (`Progressive Metalcore`, C093).
+  - **Djent** — the down-tuned, percussive, syncopated extended-range riff leads, inside
+    progressive-metalcore song forms. Reference points: Periphery, TesseracT, early Northlane,
+    Veil of Maya, ERRA, Born of Osiris, Animals as Leaders, Uneven Structure, Skyharbor,
+    Monuments. Meshuggah is the originator and is a Djent reference, not Thall.
+  - **Thall** — the displaced palm-muted groove pulse is the identity (vildhjarta and that
+    vocabulary). Shared low tuning is not enough.
+  - **Progressive Metal** — suite-form development, virtuosic interplay, and classic or modern
+    prog-metal melody lead. Reference points: Dream Theater, Haken, Symphony X, Between the
+    Buried and Me, Persefone, Plini, Intervals. If another Metal type is the foundation, keep
+    that type and add the `progressive` Trait (`Progressive Death Metal`) instead of this Type.
+  - **Instrumental** — not a classification. Animals as Leaders is Djent. Plini and Intervals
+    are Progressive Metal.
+- The `progressive` Trait on bare Metal renders the same text as `metal.progressive`
+  (`Progressive Metal`). They are not the same classification. Folder lookup prefers the Type.
+  Do not stack the Trait on the Type; that curatorial rule is not a new validator constraint.
+- Re-filing albums that were stored under `Core/Metalcore` is a library migration. This version
+  does not invalidate a published Metalcore classification.
+
 ## [0.8.0] — 2026-08-01
 
 ### Added

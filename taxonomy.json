@@ -1,7 +1,7 @@
 {
   "schema": "open-music-taxonomy/taxonomy/0.1",
   "id": "open-music-taxonomy",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "language": "en",
   "genres": [
     {
@@ -20,7 +20,7 @@
       "id": "metalcore",
       "label": "Metalcore",
       "status": "approved",
-      "sonic_definition": "Heavy music combining Metal riff vocabulary with Hardcore-derived rhythmic structures, transitions, and breakdown-centered arrangements."
+      "sonic_definition": "Heavy music combining Metal riff vocabulary with Hardcore-derived rhythmic structures, transitions, and breakdown-centered arrangements. The defining rhythmic events are hardcore breakdowns and conventional section changes. Down-tuned syncopated extended-range riff cycles as the primary vocabulary are Djent; palm-muted polyrhythmic groove pulses are Thall; extended suite-form development in the progressive-metal tradition is Progressive Metal. Extended form alone may still qualify Metalcore through the progressive Trait when the djent, thall, or progressive-metal vocabulary does not lead."
     },
     {
       "id": "deathcore",
@@ -32,7 +32,16 @@
       "id": "thall",
       "label": "Thall",
       "status": "approved",
-      "sonic_definition": "Heavy music built around palm-muted low-register riff pulses, syncopated metric displacement, and polyrhythmic groove layering as defining rhythmic vocabulary, developed within Thall."
+      "sonic_definition": "Heavy music built around palm-muted low-register riff pulses, syncopated metric displacement, and polyrhythmic groove layering as the defining rhythmic vocabulary, developed within Thall. The identity is that displaced groove — often sparse, ambient, and pitch-scooped — rather than a progressive-metalcore song. Djent shares low tuning and syncopation but is organized as structured progressive-metalcore riff songs; a down-tuned syncopated riff without this groove vocabulary is Djent, not Thall. Metalcore breakdown form and Progressive Metal suite-form melody are not this genre."
+    },
+    {
+      "id": "djent",
+      "label": "Djent",
+      "status": "approved",
+      "aliases": [
+        "djent metal"
+      ],
+      "sonic_definition": "Modern heavy music built on down-tuned, extended-range guitar, percussive syncopated riff cycles, and polymetric accents inside progressive-metalcore song forms, including instrumental music in that vocabulary. The defining sound is the djent riff itself: tightly gated low-register chugs, metric play, and polished modern production, often with harsh/clean vocal contrast or ambient clean sections. It is not Metalcore, whose rhythmic identity is the hardcore breakdown; not Thall, whose identity is the displaced palm-muted groove pulse rather than structured progressive-metalcore songs; and not Progressive Metal, whose identity is suite-form melodic and virtuosic development rather than the djent chug. Instrumental performance is not a separate Genre."
     },
     {
       "id": "hardcore",
@@ -184,6 +193,17 @@
       "genre": "metal",
       "status": "approved",
       "sonic_definition": "Metal emphasizing syncopated mid-tempo riff cycles, strong downbeat weight, and groove-centered rhythmic repetition."
+    },
+    {
+      "id": "metal.progressive",
+      "label": "Progressive",
+      "genre": "metal",
+      "status": "approved",
+      "aliases": [
+        "prog metal",
+        "prog-metal"
+      ],
+      "sonic_definition": "Metal built on extended sectional development, virtuosic instrumental interplay, and the odd-meter and long-form vocabularies of classic and modern progressive metal, including instrumental prog metal. Identity comes from suite-like structure and melodic or harmonic development, not from hardcore breakdowns, djent chug cycles, or thall's palm-muted groove pulses. Instrumental lineup is not a separate Genre. When another Metal type supplies the foundation and progressive form only qualifies it, use that Type with the progressive Trait instead of this Type. The progressive focus is intrinsic, so the progressive Trait is not applied on top of this Type."
     },
     {
       "id": "rock.hard",
@@ -386,7 +406,7 @@
       "id": "progressive",
       "label": "Progressive",
       "status": "approved",
-      "sonic_definition": "Extended development, structural variation, metric complexity, or nonstandard form is a defining compositional focus."
+      "sonic_definition": "Extended development, structural variation, metric complexity, or nonstandard form is a defining compositional focus of a style that is not already the Progressive Metal type. It qualifies other styles, such as Progressive Death Metal, Progressive Rock, or Progressive Metalcore. Progressive Metal names that focus itself and does not also take this Trait. Instrumental performance does not satisfy this Trait and is not a Genre."
     },
     {
       "id": "stoner",

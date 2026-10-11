@@ -1,6 +1,6 @@
 # Open Music Taxonomy Classification Specification
 
-Version: `0.7.0`
+Version: `0.9.0`
 
 Status: Released
 
@@ -311,6 +311,35 @@ Additive only: the **Screamo** and **Emocore** Genres are added (peer standalone
 `emoviolence`, `hardcore`, and `punk`). No existing classification is affected. Both are modeled
 by their sonic characteristics (vocal delivery, dynamics, instrumentation) per §3.
 
+### v0.8.0
+
+Additive only: the **Thall** Genre, the **Depressive** Trait (Metal, requiring the Black Type),
+and the **Breakcore** Type (`electronic.breakcore`) are added. No existing classification is
+affected.
+
+### v0.9.0
+
+Additive in the validation sense: previously valid classifications stay valid. The release splits
+progressive and djent music that library practice had been filing under Metalcore.
+
+- **Djent** (`djent`) is a new Genre. On a library that follows this taxonomy it lives at
+  `Core/Djent`, beside Metalcore, Deathcore, and Thall. It is modern, down-tuned, syncopated
+  progressive metalcore, including instrumental music in that vocabulary.
+- **Progressive Metal** is the Metal Type `metal.progressive` (label `Progressive`), so the
+  canonical render is `Progressive Metal` and the library folder is `Metal/Progressive Metal`.
+  It was not already a Genre or a Type. The existing `progressive` Trait remains the qualifier
+  for other styles (`Progressive Death Metal`, `Progressive Rock`, `Progressive Metalcore`) and
+  is not how this Type is named. Do not stack that Trait on `metal.progressive`; the grammar
+  still accepts the redundant combination, but curatorial practice does not.
+- **Instrumental** is not a Genre or a Trait. Absence of vocals does not determine classification.
+  Instrumental djent stays Djent. Instrumental prog metal is Progressive Metal.
+- Thall stays the Genre `thall`. Boundaries among Thall, Djent, Progressive Metal, and Metalcore
+  are sonic and are stated on those atoms.
+
+The bare render `Progressive Metal` is shared by the Type `metal.progressive` and by the
+`progressive` Trait on Metal with no Type. Those classifications are not exactly equal. Library
+folder resolution prefers the Type. Display text is not an identity; do not parse it.
+
 ## 14. Application profiles
 
 The base standard requires only Genre and permits Unknown. Applications MAY declare a named,
@@ -369,7 +398,7 @@ accepted under the license that already applies to the files being changed.
   "schema": "open-music-taxonomy/classification/0.1",
   "taxonomy": {
     "id": "open-music-taxonomy",
-    "version": "0.7.0"
+    "version": "0.9.0"
   },
   "scope": "album",
   "genre": "metal",
